@@ -1,0 +1,43 @@
+
+body{
+    background-color: #172627;
+}
+
+#buttons-div{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.font{
+    font-family: Arial;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.menu-button{
+    height: 500px;
+    width: 500px;
+}
+
+#gera_relatorio_button{
+    background-color: #38B6FF;
+}
+
+#cadastrar_produto_button{
+    background-color: #5CE1E6;
+}
+
+#cadastrar_funcionario_button{
+    background-color: #86D9E8;
+}
+
+#gera_relatorio_button:hover,#cadastrar_produto_button:hover,#cadastrar_funcionario_button:hover{
+    background-color: #6D2892;
+}
+
+.button-img{
+    width: 350px;
+    height: 350px;
+}
