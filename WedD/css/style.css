@@ -1,0 +1,13 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+/* Estilo para o switch ativado */
+.form-check-input:checked {
+  background-color: #28a745; /* Verde */
+}
+
+/* Estilo para o switch desativado */
+.form-check-input {
+  background-color: #dc3545; /* Vermelho */
+}
