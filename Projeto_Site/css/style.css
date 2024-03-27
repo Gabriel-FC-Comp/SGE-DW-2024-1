@@ -40,16 +40,20 @@ body {
 .degradeButton:hover {
   background: linear-gradient(to right, #4d4d4d, #000000);
   color: #eaf3c9;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.05);
 }
 
 .degradeButton.dark-mode:hover {
   background: linear-gradient(to right, #675f5f, #9c9c9c);
   color: #eaf3c9;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.05);
 }
 
 /* Espaços flutuantes relatorio */
-.div_list{
-  height: 250px;   
+.div_list {
+  height: 250px;
   max-height: 500px;
   background-color: #222222;
 }
@@ -114,4 +118,24 @@ body {
   background-image: url('../imgs/sol.png');
   /* Animação da mudança de posição */
   transition: left 0.3s;
+}
+
+
+
+
+
+.nome:hover {
+  animation: pulsarFundo 1s infinite alternate;
+}
+
+@keyframes pulsarFundo {
+  from {
+    background-color: #ff0000;
+    /* Cor inicial */
+  }
+
+  to {
+    background-color: #bb39c6;
+    /* Cor final */
+  }
 }

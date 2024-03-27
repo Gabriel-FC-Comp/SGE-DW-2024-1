@@ -11,6 +11,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <link id="theme-style" rel="stylesheet" href="./css/style.css">
+  <link id="theme-style" rel="stylesheet" href="./css/menuStyle.css">
 </head>
 
 <body>
@@ -19,16 +20,16 @@
     <div class="row align-items-center pt-4">
       <!-- logo -->
       <div class="col-auto">
-        <img id="menu" src="imgs/homePreta.png" class="img-fluid" width="100px" alt="home">
+        <img id="home" src="../imgs/logoPreta.png" class="img-fluid" width="100px" alt="logo">
       </div>
       <!-- menu -->
       <div class="col">
-        <h1 class="mb-0 corTexto">Cadastro de Produtos</h1>
+        <h1 class="mb-0 corTexto">Menu</h1>
       </div>
       <!-- Acessibilidade -->
       <div class="col-auto">
         <button class="btn">
-          <img src="imgs/accessibilityPreto.png" class="img-fluid" width="30px" alt="accessibility-central">
+          <img src="imgs/accessibilityPreta.png" class="img-fluid" width="30px" alt="accessibility">
         </button>
       </div>
 
@@ -45,36 +46,45 @@
   </div>
   <br><br><br><br>
 
-  <div id="menu" class="container text-center align-items-center">
-    <button id="menu_cd_prod_btn" class="btn">
-      <img src="" class="" alt="">
-      <p class="">Cadastrar Produtos</p>
+  <div id="menu" class="container text-center align-items-center justify-content-center d-flex">
+
+    <!-- Botões menu -->
+    <button id="menu_cd_prod_btn" class="buttonMenu">
+      <img src="../imgs/icons/cadastroProduto.png" class="img-fluid" alt="Cadastro de Produto">
+      <span class="">Cadastrar Produtos</span>
     </button>
 
-    <button id="menu_cd_func_btn" class="btn">
-      <img src="" class="" alt="">
-      <p class="">Cadastrar Funcionários</p>
+    <button id="menu_cd_func_btn" class="buttonMenu">
+      <img src="../imgs/icons/cadastroFuncionario.png" class="img-fluid" alt="Cadastro de Funcionario">
+      <span> Cadastrar Funcionários </span>
     </button>
 
-    <button id="menu_gr_rel_btn" class="btn">
-      <img src="" class="" alt="">
-      <p class="">Gerar Relatórios</p>
+    <button id="menu_gr_rel_btn" class="buttonMenu">
+      <img src="./imgs/icons/gerarRelatorios.png" class="img-fluid" alt="Gerar Relatorios">
+      <span class="">Gerar Relatórios</span>
     </button>
 
-    <button id="menu_gc_prod_type_btn" class="btn">
-      <img src="" class="" alt="">
-      <p class="">Gerenciar Tipos de Produtos</p>
+    <button id="menu_gc_prod_type_btn" class="buttonMenu">
+      <img src="./imgs/icons/gerenciarTipos.png" class="img-fluid" alt="Gerenciar Tipos de Produtos">
+      <span class="">Tipos de Produtos</span>
     </button>
 
-    <button id="menu_aj_estoq_btn" class="btn">
-      <img src="" class="" alt="">
-      <p class="">Ajustes de Estoque</p>
+    <button id="menu_aj_estoq_btn" class="buttonMenu">
+      <img src="./imgs/icons/ajusteEstoque.png" class="img-fluid" alt="Ajuste de Estoque"">
+      <span class="">Ajustes de Estoque</span>
     </button>
+
+    <button id=" menu_info" class="buttonMenu">
+      <img src="./imgs/icons/sobre.png" class="img-fluid" alt="Sobre">
+      <span class="">Mais Informações</span>
+    </button>
+
   </div>
 
   <!-- Adicionando os Scripts -->
   <script src="./scripts/menu_scripts.js"></script>
   <script src="./scripts/scripts.js"></script>
+
   <!-- Adicionando o Bootstrap no Body -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

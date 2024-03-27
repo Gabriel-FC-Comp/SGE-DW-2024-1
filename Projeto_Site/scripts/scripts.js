@@ -6,6 +6,10 @@ function mudar_cor() {
   var inputs = document.querySelectorAll('.form-control');
   var select = document.querySelectorAll('.form-select');
   var buttons = document.querySelectorAll('.degradeButton');
+  var logo = document.getElementById('menu');
+  var home = document.querySelector('img[alt="home"]');
+  var acessibilidade = document.querySelector('img[alt="accessibility"]')
+  var buttonsMenu = document.querySelectorAll('.buttonMenu');
 
   cor = !cor; // Inverte o valor atual
 
@@ -27,10 +31,14 @@ function mudar_cor() {
     buttons.forEach(function(button) {
       button.classList.toggle('dark-mode');
     });
+    if (buttonsMenu) buttonsMenu.forEach(function(button) {
+      button.classList.toggle('dark-mode');
+    });
 
     // Altera as imagens quando o switch é ligado
-    document.querySelector('img[alt="home"]').src = "./imgs/homeBranca.png";
-    document.querySelector('img[alt="accessibility-central"]').src = "./imgs/accessibilityBranca.png";
+    if (acessibilidade) acessibilidade.src = "../imgs/accessibilityBranca.png"
+    if (home) home.src = "../imgs/homeBranca.png";
+    if (logo) logo.src = "../imgs/logoBranca.png";
 
     // verificar no console
     console.log('Ligado')
@@ -54,10 +62,14 @@ function mudar_cor() {
     buttons.forEach(function(button) {
       button.classList.remove('dark-mode');
     });
+    if (buttonsMenu) buttonsMenu.forEach(function(button) {
+      button.classList.remove('dark-mode');
+    });
 
     // Restaura as imagens originais quando o switch é desligado
-    document.querySelector('img[alt="home"]').src = "./imgs/homePreta.png";
-    document.querySelector('img[alt="accessibility-central"]').src = "./imgs/accessibilityPreto.png";
+    if (acessibilidade) acessibilidade.src = "../imgs/accessibilityPreta.png"
+    if (home) home.src = "../imgs/homePreta.png";
+    if (logo) logo.src = "../imgs/logoPreta.png";
     // verificar no console
     console.log('Desligado')
   }
@@ -65,41 +77,16 @@ function mudar_cor() {
 
 document.getElementById("colorModeSwitch").addEventListener("click", mudar_cor, false);
 
-// Máscara do Custo
-document.addEventListener('DOMContentLoaded', function() {
-
-  let custo = document.getElementById('custoProduto');
-  if (custo) {
-    custo.addEventListener('input', function() {
-      // Remove caracteres não numéricos do valor do campo
-      this.value = this.value.replace(/\D/g, '');
-      // Inicializa a variável que conterá o valor formatado
-      var valorFormatado = '';
-      // Obtém o valor do campo e remove espaços em branco
-      var valor = this.value.trim();
-      // Obtém o comprimento do valor atual do campo
-      var comprimentoValor = valor.length;
-      // Verifica se o valor possui mais de 2 caracteres
-      if (comprimentoValor > 2) {
-        // Adiciona uma vírgula após os dois primeiros dígitos
-        valorFormatado = valor.substring(0, comprimentoValor - 2) + ',' + valor.substring(comprimentoValor - 2);
-      } else {
-        // Caso contrário, o valor formatado é o mesmo que o valor atual
-        valorFormatado = valor;
-      }
-      // Atualiza o valor do campo com o valor formatado
-      this.value = valorFormatado;
-    });
-  }
-});
-
-
 // Função para o botão de redirecionamento da página menu (index)
 function redirect_menu() {
   window.location.href = "index.html";
 }
 
 // Adiciona função de redirecionamento da página menu
-document.getElementById("menu").addEventListener(
+document.getElementById("home").addEventListener(
   "click", redirect_menu, false
 );
+
+
+
+

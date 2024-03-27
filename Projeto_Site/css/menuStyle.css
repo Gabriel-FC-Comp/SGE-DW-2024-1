@@ -1,0 +1,71 @@
+.buttonMenu {
+  /* Define o tamanho do botão */
+  width: 350px;
+  height: 250px;
+  /* Remove a aparência padrão do botão */
+  border: none;
+  background: linear-gradient(to right, #000000, #4d4d4d);
+  color: white;
+  /* Centraliza o conteúdo verticalmente */
+  display: flex;
+  align-items: center;
+  /* Define a direção do layout para coluna */
+  flex-direction: column;
+  /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
+  /* Define o estilo do cursor */
+  cursor: pointer;
+  /* Adiciona bordas arredondadas */
+  border-radius: 30px;
+  /* Adiciona uma sombra sutil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Transição suave ao passar o mouse */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Define margem entre os botões */
+  margin: 20px;
+}
+
+.buttonMenu img {
+  /* Define o tamanho da imagem */
+  width: 180px;
+  height: 180px;
+  /* Adiciona um espaçamento entre a imagem e o texto */
+  margin-right: 10px;
+}
+
+.buttonMenu span {
+  /* Define o estilo do texto */
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.buttonMenu.dark-mode {
+  /* Inverte as cores de fundo */
+  background: linear-gradient(to right, #9c9c9c, #675f5f);
+  /* Inverte a cor do texto */
+  color: #eaf3c9;
+}
+
+/* Efeito de hover para mudar a cor de fundo */
+.buttonMenu:hover {
+  background: linear-gradient(to right, #4d4d4d, #000000);
+  color: #eaf3c9;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.05);
+}
+
+.buttonMenu:hover.dark-mode {
+  /* Inverte as cores de fundo no hover */
+  background: linear-gradient(to right, #675f5f, #9c9c9c);
+  /* Inverte a cor do texto no hover */
+  color: eaf3c9;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.05);
+}
+
+/* Define a disposição em linha dos botões */
+#menu {
+  /* Define quebra de linha para os botões */
+  flex-wrap: wrap;
+}
