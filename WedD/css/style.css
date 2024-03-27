@@ -2,12 +2,111 @@ html {
   height: 100%;
   width: 100%;
 }
-/* Estilo para o switch ativado */
-.form-check-input:checked {
-  background-color: #28a745; /* Verde */
+
+body {
+  background-color: #ededeb;
+}
+
+
+/* Inputs/Select */
+.form-control .form-select {
+  color: white;
+  background-color: black;
+}
+
+/* Estilo para os inputs/select quando o modo noturno está ativado */
+.dark-mode .corTexto {
+  color: black;
+  background-color: white;
+}
+
+/* Button */
+.degradeButton {
+  background: linear-gradient(to right, #000000, #4d4d4d);
+  color: white;
+  /* Remove a borda */
+  border: none;
+  /* Espaçamento interno */
+  padding: 10px 20px;
+  /* Altera o cursor ao passar o mouse */
+  cursor: pointer;
+}
+
+.degradeButton.dark-mode {
+  background: linear-gradient(to right, #9c9c9c, #675f5f);
+}
+
+/* Button quando passar cursor */
+.degradeButton:hover {
+  background: linear-gradient(to right, #4d4d4d, #000000);
+  color: #eaf3c9;
+}
+
+.degradeButton.dark-mode:hover {
+  background: linear-gradient(to right, #675f5f, #9c9c9c);
+  color: #eaf3c9;
+}
+
+
+
+
+/* Switch */
+/* Oculta o input original */
+.form-check-input {
+  display: none;
 }
 
 /* Estilo para o switch desativado */
-.form-check-input {
-  background-color: #dc3545; /* Vermelho */
+.form-check-label {
+  position: relative;
+  display: inline-block;
+  /* Largura do botão no estado desativado */
+  width: 55px;
+  /* Altura do botão no estado desativado */
+  height: 26px;
+  /* Arredonda o botão */
+  border-radius: 20px;
+  /* Cor de fundo do botão desativado */
+  background-color: black;
+  /* Animação da mudança de tamanho e cor */
+  transition: width 0.3s, background-color 0.3s;
+}
+
+/* Estilo para o switch desativado */
+.form-check-label:before {
+  content: '';
+  display: inline-block;
+  /* Para posicionar a bolinha corretamente */
+  position: relative;
+  /* Ajusta a posição inicial da bolinha */
+  left: 2px;
+  /* Ajusta a largura da bolinha */
+  width: 24px;
+  /* Ajusta a altura da bolinha */
+  height: 24px;
+  /* Ícone padrão (desativado) */
+  background-image: url('../imgs/lua.png');
+  /* Ajusta a imagem para cobrir todo o espaço disponível */
+  background-size: cover;
+  /* Evita a repetição da imagem */
+  background-repeat: no-repeat;
+  /* Animação da mudança de posição */
+  transition: left 0.3s;
+  /* Arredonda as bordas para criar a forma arredondada - sem isso fica meio pixelada a imagem */
+  border-radius: 50%;
+}
+
+/* Estilo para o switch ativado */
+.form-check-input:checked+.form-check-label {
+  background-color: white;
+}
+
+/* Estilo para o switch ativado */
+.form-check-input:checked+.form-check-label:before {
+  /* Posição da bolinha quando o switch está ativado */
+  left: calc(100% - 26px);
+  /* Ícone quando ativado */
+  background-image: url('../imgs/sol.png');
+  /* Animação da mudança de posição */
+  transition: left 0.3s;
 }
