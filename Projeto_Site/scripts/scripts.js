@@ -29,8 +29,8 @@ function mudar_cor() {
     });
 
     // Altera as imagens quando o switch é ligado
-    document.querySelector('img[alt="home"]').src = "../imgs/homeBranca.png";
-    document.querySelector('img[alt="accessibility-central"]').src = "../imgs/accessibilityBranca.png";
+    document.querySelector('img[alt="home"]').src = "./imgs/homeBranca.png";
+    document.querySelector('img[alt="accessibility-central"]').src = "./imgs/accessibilityBranca.png";
 
     // verificar no console
     console.log('Ligado')
@@ -56,8 +56,8 @@ function mudar_cor() {
     });
 
     // Restaura as imagens originais quando o switch é desligado
-    document.querySelector('img[alt="home"]').src = "../imgs/homePreta.png";
-    document.querySelector('img[alt="accessibility-central"]').src = "../imgs/accessibilityPreto.png";
+    document.querySelector('img[alt="home"]').src = "./imgs/homePreta.png";
+    document.querySelector('img[alt="accessibility-central"]').src = "./imgs/accessibilityPreto.png";
     // verificar no console
     console.log('Desligado')
   }

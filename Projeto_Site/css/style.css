@@ -47,7 +47,12 @@ body {
   color: #eaf3c9;
 }
 
-
+/* Espaços flutuantes relatorio */
+.div_list{
+  height: 250px;   
+  max-height: 500px;
+  background-color: #222222;
+}
 
 
 /* Switch */
