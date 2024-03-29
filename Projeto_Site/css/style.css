@@ -15,9 +15,12 @@ body {
 }
 
 /* Estilo para os inputs/select quando o modo noturno está ativado */
-.dark-mode .corTexto {
-  color: black;
-  background-color: white;
+.corTexto {
+  color: #222222;
+}
+
+.corTexto.dark-mode {
+  color: #ededeb;
 }
 
 /* Button */
@@ -51,12 +54,207 @@ body {
   transform: scale(1.05);
 }
 
-/* Espaços flutuantes relatorio */
+/* Div para conter uma lista de elementos, dentro de uma .scroll_div */
 .div_list {
-  height: 250px;
-  max-height: 500px;
+  min-height: 250px;
+  max-height: 750px;
   background-color: #222222;
 }
+
+.div_list.dark-mode {
+  min-height: 250px;
+  max-height: 750px;
+  background-color: #ededeb;
+}
+
+/* Limita a div de scroll para o tamanho máximo da div externa */
+.scroll_div {
+  max-height: 100%;
+}
+
+/* Divs dos itens que estarão dentro da .scroll_div, ou seja, os elementos da lista como no relatório e gerenciador de tipos de produtos */
+.scroll_component {
+  background-color: #ededed;
+}
+
+.scroll_header {
+  background-color: #ededed;
+}
+
+.scroll_header.rounded-circle:hover{
+  background-color: #e6e68c;
+}
+
+.scroll_component:hover {
+  background-color: #614a4a;
+}
+
+.scroll_component:hover>.corTexto {
+  color: #ededeb;
+}
+
+.scroll_component.dark-mode{
+  background-color: #222222;
+}
+
+.scroll_header.dark-mode{
+  background-color: #222222;
+}
+
+.dark-mode.scroll_header.rounded-circle:hover{
+  background-color: #614a4a;
+}
+
+.dark-mode.scroll_component:hover {
+  background-color: #e6e68c;
+}
+
+.dark-mode.scroll_component:hover>.corTexto {
+  color: #222222;
+}
+
+.selected_scroll_component {
+  background-color: #e6e68c;
+}
+
+.selected_scroll_component>.corTexto {
+  background-color: #222222;
+}
+
+.selected_scroll_component.dark-mode {
+  background-color: #614a4a;
+}
+
+.selected_scroll_component.dark-mode>.corTexto {
+  background-color: #ededeb;
+}
+
+/* Customiza a scrollbar de toda a página (ou de uma div específica) */
+.scroll_div::-webkit-scrollbar {
+  width: 15px;
+  /* Largura da barra de rolagem */
+}
+
+/* Customiza o fundo da barra de rolagem (a trilha por onde o thumb se move) */
+.scroll_div::-webkit-scrollbar-track {
+  background: #ededeb;
+  /* Cor de fundo */
+  border-radius: 6px;
+}
+
+.scroll_div.dark-mode.scroll_div::-webkit-scrollbar-track {
+  background: #222222;
+  /* Cor de fundo */
+  border-radius: 6px;
+}
+
+/* Customiza a parte da barra de rolagem que indica a posição atual da rolagem (o thumb) */
+.scroll_div::-webkit-scrollbar-thumb {
+  background: #303030;
+  /* Cor do thumb */
+  border-radius: 15px;
+  /* Arredonda as bordas do thumb */
+}
+
+.scroll_div.dark-mode.scroll_div::-webkit-scrollbar-thumb {
+  background: #5b5b5b;
+  /* Arredonda as bordas do thumb */
+}
+
+/* Muda a cor do thumb ao passar o mouse */
+.scroll_div::-webkit-scrollbar-thumb:hover {
+  background: #5b5b5b;
+  /* Cor do thumb ao passar o mouse */
+}
+
+.scroll_div.dark-mode.scroll_div::-webkit-scrollbar-thumb:hover {
+  background: #303030;
+  /* Cor do thumb ao passar o mouse */
+}
+
+.permit {
+  background-color: #d9d9d9;
+  max-height: 750px;
+  min-height: 250px;
+}
+
+.permit.dark-mode {
+  background-color: #303030;
+  max-height: 750px;
+  min-height: 250px;
+}
+
+/* boxss*/
+/* Fonte Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Estilizando o checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+  /* Esconder o checkbox padrão */
+}
+
+.custom-checkbox label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
+  /* Espaçamento para o ícone */
+  font-family: 'Open Sans', sans-serif;
+  /* Fonte Open Sans */
+}
+
+.custom-checkbox label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  /* Tamanho do checkbox */
+  height: 18px;
+  /* Tamanho do checkbox */
+  border: 2px solid #777;
+  /* Cor da borda */
+  background-color: transparent;
+  /* Fundo transparente */
+  border-radius: 4px;
+  /* Bordas curvadas */
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label:before {
+  background-color: #777;
+  /* Cor de fundo quando selecionado */
+}
+
+.custom-checkbox label:after {
+  content: '\2713';
+  /* Símbolo de marca de seleção (checkmark) */
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  font-size: 14px;
+  color: #fff;
+  /* Cor do símbolo */
+  visibility: hidden;
+  border-radius: 2px;
+  /* Bordas curvadas para o símbolo */
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label:after {
+  visibility: visible;
+}
+
+/* Estilizando a label */
+.custom-label222 {
+  font-size: 24px;
+  /* Define o tamanho da fonte */
+  color: #333;
+  /* Define a cor do texto */
+  /*font-weight: bold; /* Define a negrito */
+}
+
+/* fechamendo dos boxs*/
+
 
 
 /* Switch */
@@ -118,24 +316,4 @@ body {
   background-image: url('../imgs/sol.png');
   /* Animação da mudança de posição */
   transition: left 0.3s;
-}
-
-
-
-
-
-.nome:hover {
-  animation: pulsarFundo 1s infinite alternate;
-}
-
-@keyframes pulsarFundo {
-  from {
-    background-color: #ff0000;
-    /* Cor inicial */
-  }
-
-  to {
-    background-color: #bb39c6;
-    /* Cor final */
-  }
 }

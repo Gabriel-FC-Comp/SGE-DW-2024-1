@@ -1,0 +1,60 @@
+.nome {
+  /* Define o tamanho do botão */
+  width: 350px;
+  height: 200px;
+  /* Define a direção do layout para coluna */
+  flex-direction: column;
+  /* Define o estilo do cursor */
+  cursor: pointer;
+  /* Adiciona uma sombra sutil */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Transição suave ao passar o mouse */
+  /* transition: background-color 0.3s, transform 0.3s; */
+  /* Define bordas arredondadas */
+  border-radius: 10px;
+  /* Define a margem entre os botões */
+  margin: 10px;
+  /* Define o alinhamento de texto centralizado */
+  text-align: center;
+  /* Define uma altura mínima */
+  /* min-height: 50px; */
+  /* Centraliza o conteúdo verticalmente */
+  display: flex;
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
+}
+
+.buttonNovo img {
+  /* Define o tamanho da imagem */
+  width: 90px;
+  height: 90px;
+  /* Adiciona um espaçamento entre a imagem e o texto */
+  margin-right: 10px;
+}
+
+.buttonNovo span {
+  /* Define o estilo do texto */
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.nome:hover {
+  animation: pulsarFundo 0.4s infinite alternate;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.5);
+}
+
+@keyframes pulsarFundo {
+  from {
+    /* Cor inicial */
+    background: linear-gradient(to right, #ff2e2e, #c751d2, #3cd361);
+
+  }
+
+  to {
+    /* Cor final */
+    background: linear-gradient(to right, #7e39fe, #39c6aa, #d2c751);
+  }
+}

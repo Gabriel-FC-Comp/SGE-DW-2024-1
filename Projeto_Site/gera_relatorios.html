@@ -19,7 +19,7 @@
     <div class="row align-items-center pt-4">
       <!-- logo -->
       <div class="col-auto">
-        <img id="home" src="../imgs/homePreta.png" class="img-fluid" width="100px" alt="home">
+        <img id="logoMenu" src="../imgs/homePreta.png" class="img-fluid" width="100px" alt="home">
       </div>
       <!-- menu -->
       <div class="col">
@@ -48,7 +48,7 @@
 
     <div class="row align-items-left">
 
-      <div class="col-auto">
+      <div class="col-auto pb-3">
         <p class="corTexto">Tipo do Relatório*</p>
         <!-- <div class="form-floating"> -->
         <select id="rel_type_select" class="form-select" required>
@@ -60,12 +60,12 @@
         <!-- </div> -->
       </div>
 
-      <div class="col-auto">
+      <div class="col-auto pb-3">
         <p class="corTexto">Inicial*</p>
         <input id="data_inicial_rel_inp" type="date" class="form-control" required>
       </div>
 
-      <div class="col-auto">
+      <div class="col-auto pb-3">
         <p class="corTexto">Data Final*</p>
         <input id="data_final_rel_inp" type="date" class="form-control" required>
       </div>
@@ -75,9 +75,22 @@
       </div>
     </div>
 
-    <div id="" class="row div_list rounded-5 overflow-auto">
+    <div class="row div_list py-4 px-3 rounded-5">
 
-
+      <div id="component_list" class="scroll_div bg-transparent overflow-y-scroll pe-4">
+          <div id="reg_1" class="scroll_component rounded-5 ps-3 my-2">
+            <p class="bg-transparent corTexto"> Reg1</p>
+          </div>
+        <div id="reg_2" class="scroll_component rounded-5 ps-3 my-2">
+          <p class="bg-transparent corTexto"> Reg2</p>
+        </div>
+        <div id="reg_3" class="scroll_component rounded-5 ps-3 my-2">
+          <p class="bg-transparent corTexto"> Reg3</p>
+        </div>
+        <div id="reg_4" class="scroll_component rounded-5 ps-3 my-2">
+          <p class="bg-transparent corTexto"> Reg4</p>
+        </div>
+      </div>
 
     </div>
 
