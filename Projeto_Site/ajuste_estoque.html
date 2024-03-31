@@ -57,7 +57,7 @@
 
         <p class="corTexto">Tipo de Ajuste*</p>
         <!-- <div class="form-floating"> -->
-        <select class="form-select" id="floatingSelect" required>
+        <select id="aj_type_inp" lass="form-select" id="floatingSelect" required>
           <option selected>Selecione um tipo</option>
           <option value="1">Entrada</option>
           <option value="2">Saída</option>
@@ -67,7 +67,7 @@
 
       <div class="col mb-2">
         <p class="corTexto">Observações</p>
-          <textarea id="observacoes" class="form-control" rows="4" cols="50"></textarea>
+        <textarea id="observacoes" class="form-control" rows="4" cols="50"></textarea>
       </div>
 
     </div>
@@ -110,19 +110,22 @@
 
       <div class="row rounded-5 my-2 mx-0 pe-0 h-25">
         <div class="col ps-2 rounded-5 scroll_header">
-          <span><span class="m-2">&nbsp</span>ID <span class="m-2">&nbsp</span> | 
-            <span class="m-5">&nbsp</span> Nome do Produto <span class="m-5">&nbsp</span> | 
-            <span class="m-2">&nbsp</span> Qtde <span class="m-2">&nbsp</span> | 
-            <span class="m-2">&nbsp</span> Valor Un (R$) <span class="m-2">&nbsp</span>| 
-            <span class="m-2">&nbsp</span> Total (R$) </span>
+          <span class="corTexto">
+            <span class="text-center idCamp">ID</span>|
+            <span class="text-center nameCamp">Nome do Produto</span>|
+            <span class="text-center qtdeCamp">Qtde</span>|
+            <span class="text-center valueCamp">Valor Un (R$)</span>|
+            <span class="text-center valueCamp">Total (R$)</span>
+          </span>
         </div>
         <div class="col-auto m-0 pe-0">
-          <button id="rmv_reg_btn" class="scroll_header rounded-circle"><span class="corTexto">&nbsp-&nbsp</span></button>
+          <button id="rmv_reg_btn" class="scroll_header rounded-circle"><span
+              class="corTexto">&nbsp-&nbsp</span></button>
         </div>
       </div>
 
       <div id="component_list" class="scroll_div bg-transparent overflow-y-scroll pe-4">
-        
+
       </div>
 
     </div>

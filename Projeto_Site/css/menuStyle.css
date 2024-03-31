@@ -17,9 +17,9 @@
   cursor: pointer;
   /* Adiciona bordas arredondadas */
   border-radius: 30px;
-  /* Adiciona uma sombra sutil */
+  /* Adiciona uma sutil sombra */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* Transição suave ao passar o mouse */
+  /* Transição ao passar o mouse */
   transition: background-color 0.3s, transform 0.3s;
   /* Define margem entre os botões */
   margin: 20px;

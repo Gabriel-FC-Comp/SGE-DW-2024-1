@@ -6,10 +6,14 @@ let quantidade = document.getElementById("qtd_estoq");
 let preco = document.getElementById("preco_estoq");
 let desconto = document.getElementById("desconto_estoq");
 let total = document.getElementById("total_estoq");
+let aj_date = document.getElementById("dataAjuste");
+let aj_type = document.getElementById("aj_type_inp");
+let obs = document.getElementById("observacoes");
 // Lista de registros
 let scroll_div = document.getElementById("component_list");
 
 let remove_reg_btn = document.getElementById("rmv_reg_btn");
+let finalize_alt_btn = document.getElementById("btn_finalizar");
 
 let contador = 0;
 
@@ -32,15 +36,18 @@ function Adicionar() {
     reg_estoq.classList.add("ps-3");
     reg_estoq.classList.add("my-2");
 
-    let p_estoq = document.createElement("p");
+    let p_estoq = document.createElement("span");
     p_estoq.classList.add("corTexto");
     p_estoq.classList.add("bg-transparent");
-    p_estoq.innerHTML = id_estoq + " | ";
-    p_estoq.innerHTML += "Produto" + " | ";
-    p_estoq.innerHTML += qtd_estoq + " | ";
-    p_estoq.innerHTML += preco_estoq + " | ";
-    p_estoq.innerHTML += desconto_estoq + " | ";
-    p_estoq.innerHTML += total_estoq;
+    p_estoq.innerHTML = `<span class="idCamp text-center">${id_estoq}</span>`;
+    p_estoq.innerHTML += " | ";
+    p_estoq.innerHTML += `<span class="nameCamp text-center">Produto</span>`;
+    p_estoq.innerHTML += " | ";
+    p_estoq.innerHTML += `<span class="qtdeCamp text-center">${qtd_estoq}</span>`;
+    p_estoq.innerHTML += " | ";
+    p_estoq.innerHTML += `<span class="valueCamp text-center">${preco_estoq}</span>`;
+    p_estoq.innerHTML += " | ";
+    p_estoq.innerHTML += `<span class="valueCamp text-center">${total_estoq}</span>`;
 
     if (cor) {
       reg_estoq.classList.add("dark-mode");
@@ -119,8 +126,23 @@ function rmv_reg() {
   }
 };
 
+function finalize_ajuste(){
+  
+  if(aj_date.value != "" && aj_type.value != "" && scroll_div.children.length > 0){
+    console.log("Data do Ajuste: " + aj_date.value);
+    console.log("Tipo do Ajuste: " + aj_type.value);
+    console.log("Observações: " + obs.value);
+    console.log("Registro de alterações");
+    console.log("");
+  }else{
+    alert("Insira um registro para ajuste e todas as informações necessárias (*) !");
+    console.log("Insira um registro para ajuste e todas as informações necessárias (*) !");
+  }
+}
+
 // Adiciona um evento de clique ao botão "add_button" (supondo que ele já tenha sido definido em algum lugar do seu código)
 add_button.addEventListener("click", Adicionar, false);
+finalize_alt_btn.addEventListener("click",finalize_ajuste,false);
 
 quantidade.addEventListener('keydown', function(event) {
   // Obtém o código da tecla pressionada

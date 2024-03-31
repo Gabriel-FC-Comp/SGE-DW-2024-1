@@ -79,6 +79,8 @@ body {
 
 .scroll_header {
   background-color: #ededed;
+  display: inline-table;
+  white-space: nowrap; 
 }
 
 .scroll_header.rounded-circle:hover{
@@ -170,6 +172,28 @@ body {
 .scroll_div.dark-mode.scroll_div::-webkit-scrollbar-thumb:hover {
   background: #303030;
   /* Cor do thumb ao passar o mouse */
+}
+
+/* Estilos para a largura dos campos */
+.idCamp {
+    max-width: 10%; /* Largura máxima como 15% da largura do contêiner pai */
+    width: 100%; /* Largura inicial como 100% */
+    display: inline-flex;
+}
+.nameCamp {
+    max-width: 45%; /* Largura máxima como 45% da largura do contêiner pai */
+    width: 100%; /* Largura inicial como 100% */
+    display: inline-flex;
+}
+.qtdeCamp {
+    max-width: 10%; /* Largura máxima como 15% da largura do contêiner pai */
+    width: 100%; /* Largura inicial como 100% */
+    display: inline-flex;
+}
+.valueCamp {
+    max-width: 15%; /* Largura máxima como 25% da largura do contêiner pai */
+    width: 100%; /* Largura inicial como 100% */
+    display: inline-flex;
 }
 
 .permit {

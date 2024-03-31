@@ -6,18 +6,14 @@
   flex-direction: column;
   /* Define o estilo do cursor */
   cursor: pointer;
-  /* Adiciona uma sombra sutil */
+  /* Adiciona uma sutil sombra */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  /* Transição suave ao passar o mouse */
-  /* transition: background-color 0.3s, transform 0.3s; */
   /* Define bordas arredondadas */
   border-radius: 10px;
   /* Define a margem entre os botões */
   margin: 10px;
   /* Define o alinhamento de texto centralizado */
   text-align: center;
-  /* Define uma altura mínima */
-  /* min-height: 50px; */
   /* Centraliza o conteúdo verticalmente */
   display: flex;
   align-items: center;
