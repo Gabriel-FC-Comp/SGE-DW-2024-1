@@ -1,8 +1,10 @@
+/* Definições padrão da página */
 html {
   height: 100%;
   width: 100%;
 }
 
+/* Definição do Background do Boddy */
 body {
   background-color: #ededeb;
 }
@@ -14,16 +16,17 @@ body {
   background-color: black;
 }
 
-/* Estilo para os inputs/select quando o modo noturno está ativado */
+/* Estilo para o texto quando o modo noturno está desativado */
 .corTexto {
   color: #222222;
 }
 
+/* Estilo para o texto quando o modo noturno está ativado */
 .corTexto.dark-mode {
   color: #ededeb;
 }
 
-/* Button */
+/* Estilo dos botões em geral */
 .degradeButton {
   background: linear-gradient(to right, #000000, #4d4d4d);
   color: white;
@@ -35,6 +38,7 @@ body {
   cursor: pointer;
 }
 
+/* Estilo para os botões no modo noturno */
 .degradeButton.dark-mode {
   background: linear-gradient(to right, #9c9c9c, #675f5f);
 }
@@ -47,6 +51,7 @@ body {
   transform: scale(1.05);
 }
 
+/* Button quando passar cursor no modo noturno */
 .degradeButton.dark-mode:hover {
   background: linear-gradient(to right, #675f5f, #9c9c9c);
   color: #eaf3c9;
@@ -61,74 +66,102 @@ body {
   background-color: #222222;
 }
 
+/* Div com a lista de elementos no modo noturno */
 .div_list.dark-mode {
   min-height: 250px;
   max-height: 750px;
   background-color: #ededeb;
 }
 
-/* Limita a div de scroll para o tamanho máximo da div externa */
+/* Estilos para a barra de rolagem */
 .scroll_div {
   max-height: 100%;
+  /* Limita a div de scroll para o tamanho máximo da div externa */
 }
 
-/* Divs dos itens que estarão dentro da .scroll_div, ou seja, os elementos da lista como no relatório e gerenciador de tipos de produtos */
+/* Estilos para os elementos da lista na .scroll_div */
 .scroll_component {
   background-color: #ededed;
+  /* Cor de fundo padrão para os itens da lista */
 }
 
+/* Estilos para o cabeçalho das listas de itens */
 .scroll_header {
   background-color: #ededed;
+  /* Cor de fundo padrão para o cabeçalho */
   display: inline-table;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
-.scroll_header.rounded-circle:hover{
+/* Estilos quando passar o mouse sobre um botão do cabeçalho */
+.scroll_header.rounded-circle:hover {
   background-color: #e6e68c;
+  /* Mudança de cor ao passar o mouse */
 }
 
+/* Estilos quando passar o mouse sobre um item da lista */
 .scroll_component:hover {
   background-color: #614a4a;
+  /* Mudança de cor ao passar o mouse */
 }
 
+/* Estilos para a cor do texto ao passar o mouse sobre um item da lista */
 .scroll_component:hover>.corTexto {
   color: #ededeb;
+  /* Cor do texto ao passar o mouse */
 }
 
-.scroll_component.dark-mode{
+/* Estilos para o modo noturno nos itens da lista */
+.scroll_component.dark-mode {
   background-color: #222222;
+  /* Cor de fundo no modo noturno */
 }
 
-.scroll_header.dark-mode{
+.scroll_header.dark-mode {
   background-color: #222222;
+  /* Cor de fundo do cabeçalho no modo noturno */
 }
 
-.dark-mode.scroll_header.rounded-circle:hover{
+/* Estilos quando passar o mouse sobre um botão do cabeçalho no modo noturno */
+.dark-mode.scroll_header.rounded-circle:hover {
   background-color: #614a4a;
+  /* Mudança de cor ao passar o mouse no modo noturno */
 }
 
+/* Estilos quando passar o mouse sobre um item da lista no modo noturno */
 .dark-mode.scroll_component:hover {
   background-color: #e6e68c;
+  /* Mudança de cor ao passar o mouse no modo noturno */
 }
 
+/* Estilos para a cor do texto ao passar o mouse sobre um item da lista no modo noturno */
 .dark-mode.scroll_component:hover>.corTexto {
   color: #222222;
+  /* Cor do texto ao passar o mouse no modo noturno */
 }
 
+/* Estilos para o item selecionado na lista */
 .selected_scroll_component {
   background-color: #e6e68c;
+  /* Cor de fundo do item selecionado */
 }
 
+/* Estilos para a cor do texto do item selecionado */
 .selected_scroll_component>.corTexto {
   background-color: #222222;
+  /* Cor do texto do item selecionado */
 }
 
+/* Estilos para o item selecionado no modo noturno */
 .selected_scroll_component.dark-mode {
   background-color: #614a4a;
+  /* Cor de fundo do item selecionado no modo noturno */
 }
 
+/* Estilos para a cor do texto do item selecionado no modo noturno */
 .selected_scroll_component.dark-mode>.corTexto {
   background-color: #ededeb;
+  /* Cor do texto do item selecionado no modo noturno */
 }
 
 /* Customiza a scrollbar de toda a página (ou de uma div específica) */
@@ -144,6 +177,7 @@ body {
   border-radius: 6px;
 }
 
+/* Customiza o fundo da barra de rolagem no modo noturno */
 .scroll_div.dark-mode.scroll_div::-webkit-scrollbar-track {
   background: #222222;
   /* Cor de fundo */
@@ -158,6 +192,7 @@ body {
   /* Arredonda as bordas do thumb */
 }
 
+/* Customiza a parte da barra de rolagem que indica a posição atual da rolagem no modo noturno */
 .scroll_div.dark-mode.scroll_div::-webkit-scrollbar-thumb {
   background: #5b5b5b;
   /* Arredonda as bordas do thumb */
@@ -169,39 +204,49 @@ body {
   /* Cor do thumb ao passar o mouse */
 }
 
+/* Muda a cor do thumb ao passar o mouse no modo noturno */
 .scroll_div.dark-mode.scroll_div::-webkit-scrollbar-thumb:hover {
   background: #303030;
   /* Cor do thumb ao passar o mouse */
 }
 
-/* Estilos para a largura dos campos */
+/* Estilos para a largura dos campos no ajuste de estoque */
+/* Campo do ID do produto */
 .idCamp {
-    max-width: 10%; /* Largura máxima como 15% da largura do contêiner pai */
-    width: 100%; /* Largura inicial como 100% */
-    display: inline-flex;
-}
-.nameCamp {
-    max-width: 45%; /* Largura máxima como 45% da largura do contêiner pai */
-    width: 100%; /* Largura inicial como 100% */
-    display: inline-flex;
-}
-.qtdeCamp {
-    max-width: 10%; /* Largura máxima como 15% da largura do contêiner pai */
-    width: 100%; /* Largura inicial como 100% */
-    display: inline-flex;
-}
-.valueCamp {
-    max-width: 15%; /* Largura máxima como 25% da largura do contêiner pai */
-    width: 100%; /* Largura inicial como 100% */
-    display: inline-flex;
+  max-width: 10%;
+  width: 100%;
+  display: inline-flex;
 }
 
+/* Campo do nome do produto */
+.nameCamp {
+  max-width: 45%;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* Campo da qtde do produto */
+.qtdeCamp {
+  max-width: 10%;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* Campo dos valores unitário e total do produto */
+.valueCamp {
+  max-width: 15%;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* Configuração da div para exibição das permissões dos funcionários */
 .permit {
   background-color: #d9d9d9;
   max-height: 750px;
   min-height: 250px;
 }
 
+/* Configuração da div para exibição das permissões dos funcionários no modo noturno*/
 .permit.dark-mode {
   background-color: #303030;
   max-height: 750px;

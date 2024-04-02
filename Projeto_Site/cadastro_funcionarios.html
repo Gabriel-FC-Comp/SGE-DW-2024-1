@@ -10,6 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+  <!-- Adicionando o estilo personalizado -->
   <link id="theme-style" rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -17,132 +18,132 @@
 
   <div id="cabecalho" class="container">
     <div class="row align-items-center pt-4">
-      <!-- logo -->
+      <!-- Logo -->
       <div class="col-auto">
-        <img id="logoMenu" src="../imgs/homePreta.png" class="img-fluid" width="100px" alt="home">
+        <img id="logoMenu" src="./imgs/homePreta.png" class="img-fluid" width="100px" alt="home">
       </div>
-      <!-- menu -->
+      <!-- Título do menu -->
       <div class="col">
         <h1 class="mb-0 corTexto">Cadastro de Funcionários</h1>
       </div>
-      <!-- Acessibilidade -->
+      <!-- Botão de acessibilidade -->
       <div class="col-auto">
         <button class="btn">
           <img src="imgs/accessibilityPreta.png" class="img-fluid" width="30px" alt="accessibility">
         </button>
       </div>
 
-      <!-- switch -->
+      <!-- Switch de modo de cor -->
       <div class="col-auto">
         <div class="form-check form-switch">
           <input id="colorModeSwitch" class="form-check-input" type="checkbox" role="switch">
           <label class="form-check-label" for="colorModeSwitch"></label>
         </div>
       </div>
-
-
     </div>
   </div>
   <br><br><br><br>
 
   <div class="container">
-    <div class="row align-items-left">
-      <div class="col-auto">
-        <p class="corTexto">CPF*</p>
-        <input id="cpfFunc" type="text" class="form-control" required>
+
+    <!-- Formulário para pegar as informações do funcionário e suas permissões -->
+    <form>
+      <div class="row align-items-left">
+        <!-- Input para CPF -->
+        <div class="col-auto">
+          <p class="corTexto">CPF*</p>
+          <input id="cpfFunc" type="text" class="form-control" required>
+        </div>
+
+        <!-- Input para Nome Completo -->
+        <div class="col-auto">
+          <p class="corTexto">Nome Completo*</p>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <!-- Input para Senha -->
+        <div class="col-auto">
+          <p class="corTexto">Senha*</p>
+          <input type="password" class="form-control" required>
+        </div>
       </div>
-
-      <div class="col-auto">
-        <p class="corTexto">Nome Completo*</p>
-        <input type="text" class="form-control" required>
-      </div>
-
-      <div class="col-auto">
-        <p class="corTexto">Senha*</p>
-        <input type="password" class="form-control" required>
-      </div>
-
-    </div>
-    <br>
-    <div class="row align-items-left pt-4 permit rounded-5 ">
-      
-      <div class="col-auto ms-3">
-        <label class="custom-label222 corTexto">Permições</label>
-        <!-- <div class="form-check ">
-          <input class="form-check-box " type="checkbox" value="" id="CheckCadastroFuncionario">
-          <label class="" for="defaultCheck1">Cadastro Funcionários</label>
-        </div>
-         <div class="form-check">
-          <input class="form-check-box" type="checkbox" value="" id="Check1">
-          <label class="" for="defaultCheck1">Default checkbox</label>
-        </div> -->
-        <div class="custom-checkbox">
-          <input id="checkCadastroFuncionario" type="checkbox">
-          <label class="corTexto" for="checkCadastroFuncionario">Cadastro Funcionário</label>
+      <br>
+      <div class="row align-items-left pt-4 permit rounded-5 ">
+        <!-- Checkbox para permissões -->
+        <div class="col-auto ms-3">
+          <label class="custom-label222 corTexto">Permissões</label>
+          <!-- Checkbox para Cadastro de Funcionário -->
+          <div class="custom-checkbox">
+            <input id="checkCadastroFuncionario" type="checkbox">
+            <label class="corTexto" for="checkCadastroFuncionario">Cadastro Funcionário</label>
+          </div>
+          <!-- Checkbox para Cadastro de Produtos -->
+          <div class="custom-checkbox">
+            <input id="checkCadastroProdutos" type="checkbox">
+            <label class="corTexto" for="checkCadastroProdutos">Cadastro Produtos</label>
+          </div>
+          <!-- Checkbox para Gerar Relatórios -->
+          <div class="custom-checkbox">
+            <input id="checkGerarRelatórios" type="checkbox">
+            <label class="corTexto" for="checkGerarRelatórios">Gerar Relatórios</label>
+          </div>
+          <!-- Checkbox adicional -->
+          <div class="custom-checkbox">
+            <input type="checkbox" id=".">
+            <label class="corTexto" for=".">.</label>
+          </div>
         </div>
 
-        <div class="custom-checkbox">
-          <input id="checkCadastroProdutos" type="checkbox">
-          <label class="corTexto" for="checkCadastroProdutos">Cadastro Produtos</label>
-        </div>
-
-        <div class="custom-checkbox">
-          <input id="checkGerarRelatórios" type="checkbox">
-          <label class="corTexto" for="checkGerarRelatórios">Gerar Relatórios</label>
-        </div>
-
-        <div class="custom-checkbox">
-          <input type="checkbox" id="...">
-          <label class="corTexto" for="...">...</label>
-        </div>
-
-      </div>
-    
-      <div class="col-auto">
-        <label class="custom-label222">&nbsp</label>
-        
-         <div class="custom-checkbox">
-          <input id="checkAjuste" type="checkbox">
-          <label class="corTexto" for="checkAjuste">Ajuste de Estoque:</label>
-        </div>
-        
+        <!-- Outro conjunto de checkboxes -->
+        <div class="col-auto">
+          <label class="custom-label222">&nbsp</label>
+          <!-- Checkbox para Ajuste de Estoque -->
+          <div class="custom-checkbox">
+            <input id="checkAjuste" type="checkbox">
+            <label class="corTexto" for="checkAjuste">Ajuste de Estoque:</label>
+          </div>
+          <!-- Checkbox para Compras -->
           <div class="custom-checkbox ps-4">
             <input id="checkCompras" type="checkbox">
             <label class="corTexto" for="checkCompras">Compras</label>
           </div>
-
+          <!-- Checkbox para Vendas -->
           <div class="custom-checkbox ps-4">
             <input id="checkVendas" type="checkbox">
             <label class="corTexto" for="checkVendas">Vendas</label>
           </div>
-        
-        <div class="custom-checkbox">
-          <input type="checkbox" id="...2">
-          <label class="corTexto" for="...2">...</label>
+          <!-- Checkbox adicional -->
+          <div class="custom-checkbox">
+            <input type="checkbox" id=".2">
+            <label class="corTexto" for=".2">.</label>
+          </div>
+        </div>
+
+        <!-- Botão para redefinir permissões -->
+        <div class="position-relative">
+          <button id="redfine_func_perm_button" type="button"
+            class="rounded-pill degradeButton position-absolute bottom-0 end-0 m-3">Redefinir Permissões</button>
         </div>
       </div>
 
-      <div class="position-relative">
-        <button id="redfine_func_perm_button"
-          class="rounded-pill degradeButton position-absolute bottom-0 end-0 m-3">Redefinir Permissões</button>
+      <br><br>
+
+      <div class="row align-items-left">
+        <!-- Botão para salvar informações do funcionário -->
+        <div class="col-auto">
+          <button id="save_func_button" type="button" class="rounded-pill degradeButton end-0 m-3"
+            type="submit">Salvar</button>
+        </div>
+
+        <!-- Botão para excluir funcionário -->
+        <div class="col-auto">
+          <button id="delet_func_button" type="button" class="rounded-pill degradeButton end-0 m-3">Excluir
+            funcionário</button>
+        </div>
       </div>
-    </div>
 
-    <br><br>
-
-    <div class="row align-items-left">
-      <div class="col-auto">
-        <button id="save_func_button" class="rounded-pill degradeButton end-0 m-3" type="submit">Salvar</button>
-      </div>
-
-      <div class="col-auto">
-        <button id="delet_func_button" class="rounded-pill degradeButton end-0 m-3">Excluir funcionario</button>
-      </div>
-
-    </div>
+    </form>
   </div>
-
-
 
   <!-- Adicionando os Scripts -->
   <script src="./scripts/scripts.js"></script>
