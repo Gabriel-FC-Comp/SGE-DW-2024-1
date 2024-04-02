@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 // Função para redefinir todos os checkboxes para o estado desmarcado
 function resetCheckboxes() {
   // Seleciona todos os checkboxes dentro da lista de tarefas
@@ -12,6 +22,8 @@ function resetCheckboxes() {
 // Função simples para salvar dados
 function simpleSalvar() {
   console.log("Salvou com sucesso!"); // Exibe uma mensagem no console
+  // Redireciona para o menu
+  window.location.href = "index.html";
 }
 
 // Função simples para excluir dados
@@ -27,3 +39,12 @@ document.getElementById("save_func_button").addEventListener("click", simpleSalv
 
 // Adiciona o evento de clique ao botão de excluir
 document.getElementById("delet_func_button").addEventListener("click", simpleExcluir, false);
+
+// Conta e exibe no terminal 
+$(document).ready(function() {
+  $('#func_name_inp').on('input', function() {
+    var inputText = $(this).val();
+    var numLetras = inputText.length;
+    console.log('Número de caracteres no nome do funcionário: ' + numLetras);
+  });
+});

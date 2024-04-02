@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 // botão para adicionar produtos
 let add_button = document.getElementById("btn_adicionar");
 

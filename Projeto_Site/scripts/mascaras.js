@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 // Máscara Dinheiro
 document.addEventListener('DOMContentLoaded', function() {
 

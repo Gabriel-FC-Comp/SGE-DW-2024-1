@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 .nome {
   /* Define o tamanho do botão */
   width: 350px;
@@ -53,4 +63,24 @@
     /* Cor final */
     background: linear-gradient(to right, #7e39fe, #39c6aa, #d2c751);
   }
+}
+
+/* Configuração da tabela de Tecnologias */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* Estilo para as células da tabela */
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+/* Estilo para as linhas pares */
+tr:nth-child(even) {
+    background-color: #e5e6a3;
+}
+/* Estilo para as linhas ímpares */
+tr:nth-child(odd) {
+    background-color: #757557;
 }

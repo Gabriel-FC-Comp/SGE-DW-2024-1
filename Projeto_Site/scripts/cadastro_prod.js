@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 // Obtendo referências dos elementos do DOM através de seus IDs para manipulação
 let prod_id = document.getElementById("prod_id_inp"); // Campo de entrada do ID do produto
 let prod_name = document.getElementById("nomeProduto"); // Campo de entrada do nome do produto
@@ -13,6 +23,7 @@ let del_prod_btn = document.getElementById("delet_prod_button"); // Botão para 
 function save_prod() {
   // Verifica se todos os campos obrigatórios estão preenchidos
   if (prod_id.value != "" && prod_name.value != "" && prod_type.value != "" && prod_cost.value != "" && prod_model.value != "") {
+    
     // Registra no console a adição de um novo produto
     console.log("Adicionando novo produto:");
     console.log("ID: " + prod_id.value);

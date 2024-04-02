@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 /* Pegando os elementos uma vez para adicionar as funcionalidades */
 let rel_type_select = document.getElementById("rel_type_select"); // Select para escolher o tipo de relatório
 let data_inicial_rel_inp = document.getElementById("data_inicial_rel_inp"); // Input para data inicial

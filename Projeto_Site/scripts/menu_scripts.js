@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 // Função para o botão de redirecionamento da página de cadastro de produtos
 function redirect_cad_prod() {
   window.location.href = "cadastro_produtos.html";

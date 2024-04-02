@@ -1,3 +1,13 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
 /* Pegando os elementos necessários do HTML */
 let add_type_btn = document.getElementById("add_type_btn"); // Botão para adicionar tipo
 let rmv_type_btn = document.getElementById("rmv_type_btn"); // Botão para remover tipo
