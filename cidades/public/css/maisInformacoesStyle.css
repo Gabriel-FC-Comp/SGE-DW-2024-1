@@ -1,0 +1,86 @@
+/*
+
+Autores:
+  * Ana Carolina Ribeiro Miranda 
+  * Cristian Andre Sanches
+  * Gabriel Finger Conte
+  * Leonardo Fagote
+
+*/
+
+.nome {
+  /* Define o tamanho do botão */
+  width: 350px;
+  height: 200px;
+  /* Define a direção do layout para coluna */
+  flex-direction: column;
+  /* Define o estilo do cursor */
+  cursor: pointer;
+  /* Adiciona uma sutil sombra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Define bordas arredondadas */
+  border-radius: 10px;
+  /* Define a margem entre os botões */
+  margin: 10px;
+  /* Define o alinhamento de texto centralizado */
+  text-align: center;
+  /* Centraliza o conteúdo verticalmente */
+  display: flex;
+  align-items: center;
+  /* Centraliza o conteúdo horizontalmente */
+  justify-content: center;
+}
+
+.buttonNovo img {
+  /* Define o tamanho da imagem */
+  width: 90px;
+  height: 90px;
+  /* Adiciona um espaçamento entre a imagem e o texto */
+  margin-right: 10px;
+}
+
+.buttonNovo span {
+  /* Define o estilo do texto */
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.nome:hover {
+  animation: pulsarFundo 0.4s infinite alternate;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.5);
+}
+
+@keyframes pulsarFundo {
+  from {
+    /* Cor inicial */
+    background: linear-gradient(to right, #ff2e2e, #c751d2, #3cd361);
+
+  }
+
+  to {
+    /* Cor final */
+    background: linear-gradient(to right, #7e39fe, #39c6aa, #d2c751);
+  }
+}
+
+/* Configuração da tabela de Tecnologias */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+/* Estilo para as células da tabela */
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+/* Estilo para as linhas pares */
+tr:nth-child(even) {
+    background-color: #e5e6a3;
+}
+/* Estilo para as linhas ímpares */
+tr:nth-child(odd) {
+    background-color: #757557;
+}
