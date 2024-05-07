@@ -17,7 +17,7 @@ a) Faça o cadastro dos dados da sua equipe no link desta atividade.
 
 ### Etapas do Projeto 2
 
-- [X] Crie uma base de dados no MySQL e exiba em uma página PHP que o seu site tem conexão com o banco de dados. [https://gfc-cloud.ddns.net/cidades_php/cidades.php](https://gfc-cloud.ddns.net/cidades_php/cidades.php)
+- [X] Crie uma base de dados no MySQL e exiba em uma página PHP que o seu site tem conexão com o banco de dados. [https://gfc-cloud.ddns.net/cidades_php/cidades.php](http://gfc-cloud.ddns.net/cidades_php/cidades.php)
 - [X] No MySQL, crie as tabelas T_ESTADOS (id, nome, sigla) e T_CIDADES(id,nome,id_estado). O campo 'id_estado' em 'T_CIDADES' é chave estrangeira e referencia o campo 'id' da tabela T_ESTADOS.
 - [X] Na página PHP, faça a importação dos dados do arquivo 'estados.txt' para a tabela T_ESTADOS do banco de dados MySQL.
 - [X] Na página PHP, faça a importação do conteúdo do arquivo 'municipios.csv' para a tabela 'T_CIDADES'. Observe que é necessário uma consulta SQL em 'T_ESTADOS' para obter o 'id_estado' de acordo com a 'sigla' em 'municipios.csv', antes de inserir a cidade em 'T_CIDADES'.
