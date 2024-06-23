@@ -1,0 +1,516 @@
+/* Definições padrão da página */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Definição do Background do Boddy */
+body {
+  background-color: #ededeb;
+}
+
+
+/* Inputs/Select */
+.form-control .form-select {
+  color: white;
+  background-color: black;
+}
+
+
+/* Inputs no modo noturno */
+.card.dark-mode {
+  background-color: #4e4e4e;
+  color: #ededeb;
+  border: 1px solid #a4a4a4;
+}
+
+/* Estilo para o texto quando o modo noturno está desativado */
+.corTexto {
+  color: #222222;
+}
+
+/* Estilo para o texto quando o modo noturno está ativado */
+.corTexto.dark-mode {
+  color: #ededeb;
+}
+
+/* Estilo dos botões em geral */
+.degradeButton {
+  background: linear-gradient(to right, #000000, #4d4d4d);
+  color: white;
+  /* Remove a borda */
+  border: none;
+  /* Espaçamento interno */
+  padding: 10px 20px;
+  /* Altera o cursor ao passar o mouse */
+  cursor: pointer;
+}
+
+/* Estilo para os botões no modo noturno */
+.degradeButton.dark-mode {
+  background: linear-gradient(to right, #9c9c9c, #675f5f);
+}
+
+/* Button quando passar cursor */
+.degradeButton:hover {
+  background: linear-gradient(to right, #4d4d4d, #000000);
+  color: #eaf3c9;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.05);
+}
+
+/* Button quando passar cursor no modo noturno */
+.degradeButton.dark-mode:hover {
+  background: linear-gradient(to right, #675f5f, #9c9c9c);
+  color: #eaf3c9;
+  /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  transform: scale(1.05);
+}
+
+/* Div para conter uma lista de elementos, dentro de uma .scroll_div */
+.div_list {
+  min-height: 250px;
+  max-height: 750px;
+  background-color: #222222;
+}
+
+/* Div com a lista de elementos no modo noturno */
+.div_list.dark-mode {
+  min-height: 250px;
+  max-height: 750px;
+  background-color: #ededeb;
+}
+
+/* Estilos para a barra de rolagem */
+.scroll_div {
+  max-height: 100%;
+  /* Limita a div de scroll para o tamanho máximo da div externa */
+}
+
+/* Estilo para adicionar bordas na lateral direita nos componentes scroll */
+.right_borded {
+  border-right-color: #222222;
+  border-right-width: 2px;
+  border-right-style: solid;
+}
+
+/* Estilo escuro para as bordas na lateral direita nos componentes scroll */
+.dark-mode .right_borded {
+  border-right-color: #ededeb;
+}
+
+/* Estilos para os elementos da lista na .scroll_div */
+.scroll_component {
+  background-color: #ededed;
+  /* Cor de fundo padrão para os itens da lista */
+}
+
+/* Estilos para o cabeçalho das listas de itens */
+.scroll_header {
+  background-color: #ededed;
+  /* Cor de fundo padrão para o cabeçalho */
+  /* display: inline-table;
+  white-space: nowrap; */
+}
+
+/* Estilos quando passar o mouse sobre um botão do cabeçalho */
+.scroll_header.rounded-circle:hover {
+  background-color: #e6e68c;
+  /* Mudança de cor ao passar o mouse */
+}
+
+/* Estilos quando passar o mouse sobre um item da lista */
+.scroll_component:hover {
+  background-color: #614a4a;
+  /* Mudança de cor ao passar o mouse */
+}
+
+/* Estilos para a cor do texto ao passar o mouse sobre um item da lista */
+.scroll_component:hover .corTexto {
+  color: #ededeb;
+  /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos para o modo noturno nos itens da lista */
+.scroll_component.dark-mode {
+  background-color: #222222;
+  /* Cor de fundo no modo noturno */
+}
+
+.scroll_header.dark-mode {
+  background-color: #222222;
+  /* Cor de fundo do cabeçalho no modo noturno */
+}
+
+/* Estilos quando passar o mouse sobre um botão do cabeçalho no modo noturno */
+.dark-mode.scroll_header.rounded-circle:hover {
+  background-color: #614a4a;
+  /* Mudança de cor ao passar o mouse no modo noturno */
+}
+
+/* Estilos quando passar o mouse sobre um item da lista no modo noturno */
+.dark-mode.scroll_component:hover {
+  background-color: #e6e68c;
+  /* Mudança de cor ao passar o mouse no modo noturno */
+}
+
+/* Estilos para a cor do texto ao passar o mouse sobre um item da lista no modo noturno */
+.dark-mode.scroll_component:hover .corTexto {
+  color: #222222;
+  /* Cor do texto ao passar o mouse no modo noturno */
+}
+
+/* Estilos para o item selecionado na lista */
+.selected_scroll_component {
+  background-color: #e6e68c;
+  /* Cor de fundo do item selecionado */
+}
+
+/* Estilos para a cor do texto do item selecionado */
+.selected_scroll_component>.corTexto {
+  background-color: #222222;
+  /* Cor do texto do item selecionado */
+}
+
+/* Estilos para o item selecionado no modo noturno */
+.selected_scroll_component.dark-mode {
+  background-color: #614a4a;
+  /* Cor de fundo do item selecionado no modo noturno */
+}
+
+/* Estilos para a cor do texto do item selecionado no modo noturno */
+.selected_scroll_component.dark-mode>.corTexto {
+  background-color: #ededeb;
+  /* Cor do texto do item selecionado no modo noturno */
+}
+
+/* Customiza a scrollbar de toda a página (ou de uma div específica) */
+.scroll_div::-webkit-scrollbar {
+  width: 15px;
+  /* Largura da barra de rolagem */
+}
+
+/* Customiza o fundo da barra de rolagem (a trilha por onde o thumb se move) */
+.scroll_div::-webkit-scrollbar-track {
+  background: #ededeb;
+  /* Cor de fundo */
+  border-radius: 6px;
+}
+
+/* Customiza o fundo da barra de rolagem no modo noturno */
+.scroll_div.dark-mode.scroll_div::-webkit-scrollbar-track {
+  background: #222222;
+  /* Cor de fundo */
+  border-radius: 6px;
+}
+
+/* Customiza a parte da barra de rolagem que indica a posição atual da rolagem (o thumb) */
+.scroll_div::-webkit-scrollbar-thumb {
+  background: #303030;
+  /* Cor do thumb */
+  border-radius: 15px;
+  /* Arredonda as bordas do thumb */
+}
+
+/* Customiza a parte da barra de rolagem que indica a posição atual da rolagem no modo noturno */
+.scroll_div.dark-mode.scroll_div::-webkit-scrollbar-thumb {
+  background: #5b5b5b;
+  /* Arredonda as bordas do thumb */
+}
+
+/* Muda a cor do thumb ao passar o mouse */
+.scroll_div::-webkit-scrollbar-thumb:hover {
+  background: #5b5b5b;
+  /* Cor do thumb ao passar o mouse */
+}
+
+/* Muda a cor do thumb ao passar o mouse no modo noturno */
+.scroll_div.dark-mode.scroll_div::-webkit-scrollbar-thumb:hover {
+  background: #303030;
+  /* Cor do thumb ao passar o mouse */
+}
+
+/* Estilos para a largura dos campos no ajuste de estoque */
+/* Campo do ID do produto */
+.idCamp {
+  max-width: 10%;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* Campo do nome do produto */
+.nameCamp {
+  max-width: 45%;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* Campo da qtde do produto */
+.qtdeCamp {
+  max-width: 10%;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* Campo dos valores unitário e total do produto */
+.valueCamp {
+  max-width: 15%;
+  width: 100%;
+  display: inline-flex;
+}
+
+/* Configuração da div para exibição das permissões dos funcionários */
+.permit {
+  background-color: #d9d9d9;
+  max-height: 750px;
+  min-height: 250px;
+}
+
+/* Configuração da div para exibição das permissões dos funcionários no modo noturno*/
+.permit.dark-mode {
+  background-color: #303030;
+  max-height: 750px;
+  min-height: 250px;
+}
+
+/* boxss*/
+/* Fonte Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Estilizando o checkbox */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+  /* Esconder o checkbox padrão */
+}
+
+.custom-checkbox label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
+  /* Espaçamento para o ícone */
+  font-family: 'Open Sans', sans-serif;
+  /* Fonte Open Sans */
+}
+
+.custom-checkbox label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  /* Tamanho do checkbox */
+  height: 18px;
+  /* Tamanho do checkbox */
+  border: 2px solid #777;
+  /* Cor da borda */
+  background-color: transparent;
+  /* Fundo transparente */
+  border-radius: 4px;
+  /* Bordas curvadas */
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label:before {
+  background-color: #777;
+  /* Cor de fundo quando selecionado */
+}
+
+.custom-checkbox label:after {
+  content: '\2713';
+  /* Símbolo de marca de seleção (checkmark) */
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  font-size: 14px;
+  color: #fff;
+  /* Cor do símbolo */
+  visibility: hidden;
+  border-radius: 2px;
+  /* Bordas curvadas para o símbolo */
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label:after {
+  visibility: visible;
+}
+
+/* Estilizando a label */
+.custom-label222 {
+  font-size: 24px;
+  /* Define o tamanho da fonte */
+  color: #333;
+  /* Define a cor do texto */
+  /*font-weight: bold; /* Define a negrito */
+}
+
+
+/* Switch */
+/* Oculta o input original */
+.form-check-input {
+  display: none;
+}
+
+/* Estilo para o switch desativado */
+.form-check-label {
+  position: relative;
+  display: inline-block;
+  /* Largura do botão no estado desativado */
+  width: 55px;
+  /* Altura do botão no estado desativado */
+  height: 26px;
+  /* Arredonda o botão */
+  border-radius: 20px;
+  /* Cor de fundo do botão desativado */
+  background-color: black;
+  /* Animação da mudança de tamanho e cor */
+  transition: width 0.3s, background-color 0.3s;
+}
+
+/* Estilo para o switch desativado */
+.form-check-label:before {
+  content: '';
+  display: inline-block;
+  /* Para posicionar a bolinha corretamente */
+  position: absolute;
+  top: 50%;
+  /* left: 2px; */
+  transform: translateY(-50%);
+  /* Ajusta a posição inicial da bolinha */
+  left: 2px;
+  /* Ajusta a largura da bolinha */
+  width: 24px;
+  /* Ajusta a altura da bolinha */
+  height: 24px;
+  /* Ícone padrão (desativado) */
+  background-image: url('../imgs/lua.png');
+  /* Ajusta a imagem para cobrir todo o espaço disponível */
+  background-size: cover;
+  /* Evita a repetição da imagem */
+  background-repeat: no-repeat;
+  /* Animação da mudança de posição */
+  transition: left 0.3s;
+  /* Arredonda as bordas para criar a forma arredondada - sem isso fica meio pixelada a imagem */
+  border-radius: 50%;
+}
+
+/* Estilo para o switch ativado */
+.form-check-input:checked+.form-check-label {
+  background-color: white;
+}
+
+/* Estilo para o switch ativado */
+.form-check-input:checked+.form-check-label:before {
+  /* Posição da bolinha quando o switch está ativado */
+  left: calc(100% - 26px);
+  /* Ícone quando ativado */
+  background-image: url('../imgs/sol.png');
+  /* Animação da mudança de posição */
+  transition: left 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+/* Caixinha */
+.modal-content {
+  /* Fundo e bordas */
+  background-color: #aaaaaa;
+  /* Espaçamento interno */
+  padding: 20px;
+  /* Borda arredondada */
+  border-radius: 20px;
+  /* Sombra */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Alinhamento do texto */
+  text-align: center;
+  /* Posicionamento relativo para os elementos internos */
+  position: relative;
+  /* Largura definida */
+  width: 300px;
+}
+
+/* Controle deslizante */
+.slider {
+  /* Largura e margem */
+  width: 90%;
+  /* Centralizado e margem inferior */
+  margin: 0 auto 15px;
+  /* Controle deslizante */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Altura */
+  height: 10px;
+  /* Borda arredondada */
+  border-radius: 50px;
+  /* Cor de fundo */
+  background: #ffffff;
+  /* Sem contorno ao focar */
+  outline: none;
+  /* Transição suave */
+  transition: background 0.2s;
+}
+
+/* Controle deslizante */
+.slider::-webkit-slider-thumb {
+  /* Remover estilo padrão */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  /* Borda arredondada */
+  border-radius: 50%;
+  /* Cor de fundo */
+  background: #000000;
+  /* Cursor ao passar o mouse */
+  cursor: pointer;
+}
+
+/* P */
+.slider::-moz-range-thumb {
+  /* Dimensões e estilo */
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* Borda arredondada */
+  background: #000000;
+  /* Cor de fundo */
+  cursor: pointer;
+  /* Cursor ao passar o mouse */
+}
+
+/* Botão para fechar a modal */
+.close {
+  /* Posicionamento absoluto */
+  position: absolute;
+  /* Distância do topo */
+  top: 5px;
+  /* Distância da direita */
+  right: 5px;
+  /* Tamanho da fonte */
+  font-size: 30px;
+  /* Cor do texto */
+  color: #000000;
+  /* Fundo transparente */
+  background: transparent;
+  /* Sem borda */
+  border: none;
+  /* Limita a largura do botão */
+  max-width: 30px;
+  /* Cursor ao passar o mouse */
+  cursor: pointer;
+}
+
+/* Aumenta o espaçamento entre a caixa de permissões e o resto do conteúdo */
+.permit {
+  margin-top: 50px;
+}
+
+/* Ajusta o espaçamento entre os elementos dentro da caixa de permissões */
+.custom-checkbox {
+  margin-bottom: 20px;
+}
