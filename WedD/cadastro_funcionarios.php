@@ -114,7 +114,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
         </div>
         <!-- Botão de logout -->
         <div class="col-auto">
-          <form action="end_session.php" method="POST">
+          <form action="./scripts/end_session.php" method="POST">
             <button id="logout_btn" class="btn">
               <img src="./imgs/logout.png" class="img-fluid" width="30px" alt="logout">
             </button>
@@ -173,13 +173,13 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
             </div>
             <!-- Checkbox para Gerar Relatórios -->
             <div class="custom-checkbox">
-              <input id="checkGerarRelatorios" name="check_gen_rel" type="checkbox">
-              <label class="corTexto" for="checkGerarRelatorios">Gerar Relatórios</label>
+              <input id="checkConsultarProd" name="check_cons_prod" type="checkbox">
+              <label class="corTexto" for="checkConsultarProd">Consultar Produtos</label>
             </div>
             <!-- Checkbox adicional -->
             <div class="custom-checkbox">
-              <input id="checkPermissoesFunc" name="check_permiss_func" type="checkbox">
-              <label class="corTexto" for="checkPermissoesFunc">Permissões dos Funcionários</label>
+              <input id="checkTiposProdutos" name="check_type_prod" type="checkbox">
+              <label class="corTexto" for="checkTiposProdutos">Tipos de Produtos</label>
             </div>
           </div>
 
@@ -206,6 +206,20 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
               <label class="corTexto" for="checkCorrecao">Correção de Estoque</label>
             </div>
             <br><br><br>
+          </div>
+
+          <!-- Outro conjunto de checkboxes -->
+          <div class="col-auto ms-3">
+            <!-- Checkbox para Gerar Relatórios -->
+            <div class="custom-checkbox">
+              <input id="checkGerarRelatorios" name="check_gen_rel" type="checkbox">
+              <label class="corTexto" for="checkGerarRelatorios">Gerar Relatórios</label>
+            </div>
+            <!-- Checkbox adicional -->
+            <div class="custom-checkbox">
+              <input id="checkPermissoesFunc" name="check_permiss_func" type="checkbox">
+              <label class="corTexto" for="checkPermissoesFunc">Permissões dos Funcionários</label>
+            </div>
           </div>
 
           <!-- Botão para redefinir permissões -->

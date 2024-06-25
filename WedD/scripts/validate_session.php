@@ -36,23 +36,23 @@ $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result();
 
-if($result){
-    if($result->num_rows > 0){
+if ($result) {
+    if ($result->num_rows > 0) {
         $rows = $result->fetch_assoc();
         $password_bd = $rows["senha_funcionario"];
-        if($password ==$password_bd){
-        // A alterar pra esse
-        // if(password_verify($password,$password_bd)){
+        if ($password == $password_bd) {
+            // A alterar pra esse
+            // if(password_verify($password,$password_bd)){
             // Iniciar a sessão
             session_start();
             // Definir várias variáveis de sessão
             $_SESSION['user_id'] = $username;
             $_SESSION['podi_cad_func'] = $rows["permissao_cadastro_func"];
+            $_SESSION['consult_prod'] = $rows["permissao_consultar_prod"];
             $_SESSION['podi_cad_prod'] = $rows["permissao_cadastro_prod"];
             $_SESSION['podi_ger_relt'] = $rows["permissao_gerar_rel"];
             $_SESSION['podi_ajs_prod'] = $rows["permissao_tipos_produtos"];
             $_SESSION['podi_ajs_estq'] = $rows["permissao_ajuste_estoque"];
-            $_SESSION['consult_prod'] = $rows["consultar_produto"];
             $_SESSION['podi_ajs_comp'] = $rows["permissao_ajuste_estoque_compras"];
             $_SESSION['podi_ajs_vend'] = $rows["permissao_ajuste_estoque_vendas"];
             $_SESSION['podi_ajs_ajst'] = $rows["permissao_ajuste_estoque_ajuste"];
@@ -60,14 +60,13 @@ if($result){
             $_SESSION['user_connected'] = true;
 
             echo json_encode(array('sucess' => "Credenciais Corretas!"));
-        }else{
+        } else {
             echo json_encode(array('error' => "Senha incorreta!"));
         }
-    }else{
+    } else {
         echo json_encode(array('error' => "Usuário não cadastrado!"));
     }
-
-}else{
+} else {
     echo json_encode(array('error' => "Falha na requisição do banco de dados!"));
 }
 

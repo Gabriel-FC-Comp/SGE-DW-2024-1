@@ -9,13 +9,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $cpf;
     $nome = $_POST['func_name'];
     $senha = $_POST['func_password'];
-    $permissao_cadastro_func = isset($_POST['checkCadastroFuncionario']) ? 1 : 0;
-    $permissao_cadastro_prod = isset($_POST['checkCadastroProdutos']) ? 1 : 0;
-    $permissao_gerar_rel = isset($_POST['checkGerarRelatorios']) ? 1 : 0;
-    $permissao_ajuste_estoque_compras = isset($_POST['checkCompras']) ? 1 : 0;
-    $permissao_ajuste_estoque_vendas = isset($_POST['checkVendas']) ? 1 : 0;
-    $permissao_ajuste_estoque_ajuste = isset($_POST['checkCorrecao']) ? 1 : 0;
-    $permissao_mudar_permissoes = isset($_POST['checkPermissoesFunc']) ? 1 : 0;
+    $permissao_cadastro_func = isset($_POST['check_cad_func']) ? 1 : 0;
+    $permissao_consultar_prod = isset($_POST['check_cons_prod']) ? 1 : 0;
+    $permissao_cadastro_prod = isset($_POST['check_cad_prod']) ? 1 : 0;
+    $permissao_gerar_rel = isset($_POST['check_gen_rel']) ? 1 : 0;
+    $permissao_tipos_produtos = isset($_POST['check_type_prod']) ? 1 : 0;
+    $permissao_ajuste_estoque = isset($_POST['check_ajust_estoq']) ? 1 : 0;
+    $permissao_ajuste_estoque_compras = isset($_POST['check_ajust_compras']) ? 1 : 0;
+    $permissao_ajuste_estoque_vendas = isset($_POST['check_ajust_vendas']) ? 1 : 0;
+    $permissao_ajuste_estoque_ajuste = isset($_POST['check_ajust_correcoes']) ? 1 : 0;
+    $permissao_mudar_permissoes = isset($_POST['check_permiss_func']) ? 1 : 0;
     echo "Aqui passou!\n";
     $stmt = $conn->prepare("SELECT * FROM funcionarios WHERE cpf_funcionario = ?");
     echo "Aqui passou!\n";
@@ -32,8 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 UPDATE funcionarios
                 SET nome_funcionario = '$nome',
                     permissao_cadastro_func = '$permissao_cadastro_func',
+                    permissao_consultar_prod = '$permissao_consultar_prod',
                     permissao_cadastro_prod = '$permissao_cadastro_prod',
                     permissao_gerar_rel = '$permissao_gerar_rel',
+                    permissao_tipos_produtos = '$permissao_tipos_produtos',
+                    permissao_ajuste_estoque = '$permissao_ajuste_estoque',
                     permissao_ajuste_estoque_compras = '$permissao_ajuste_estoque_compras',
                     permissao_ajuste_estoque_vendas = '$permissao_ajuste_estoque_vendas',
                     permissao_ajuste_estoque_ajuste = '$permissao_ajuste_estoque_ajuste',
@@ -60,4 +66,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Fecha a conexão com o banco de dados
     $conn->close();
 }
-?>

@@ -30,8 +30,10 @@ CREATE TABLE funcionarios (
     nome_funcionario VARCHAR(50),
     senha_funcionario VARCHAR(50),
     permissao_cadastro_func BOOLEAN,
+    permissao_consultar_prod BOOLEAN,
     permissao_cadastro_prod BOOLEAN,
     permissao_gerar_rel BOOLEAN,
+    permissao_tipos_produtos BOOLEAN,
     permissao_ajuste_estoque BOOLEAN,
     permissao_ajuste_estoque_compras BOOLEAN,
     permissao_ajuste_estoque_vendas BOOLEAN,
@@ -82,10 +84,23 @@ VALUES
 ('Óculos de Sol Aviador', 200.00, 'Aviador2024', 7894561230125, 100, 'Óculos de Sol');
 
 -- Inserindo dados em funcionarios
-INSERT INTO funcionarios (cpf_funcionario, nome_funcionario, senha_funcionario, permissao_cadastro_func, permissao_cadastro_prod, permissao_gerar_rel, permissao_ajuste_estoque, permissao_ajuste_estoque_compras, permissao_ajuste_estoque_vendas, permissao_ajuste_estoque_ajuste, permissao_mudar_permissoes) 
+INSERT INTO funcionarios (
+    cpf_funcionario, 
+    nome_funcionario, 
+    senha_funcionario, 
+    permissao_cadastro_func,
+    permissao_consultar_prod,
+    permissao_cadastro_prod,
+    permissao_gerar_rel,
+    permissao_tipos_produtos,
+    permissao_ajuste_estoque,
+    permissao_ajuste_estoque_compras,
+    permissao_ajuste_estoque_vendas,
+    permissao_ajuste_estoque_ajuste,
+    permissao_mudar_permissoes) 
 VALUES 
-(12345678901, 'João Silva', 'senha123', TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
-(98765432109, 'Maria Souza', 'senha456', TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE);
+(12345678901, 'João Silva', 'senha123', TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+(98765432109, 'Maria Souza', 'senha456', TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE);
 
 -- Inserindo dados em batch_registros
 INSERT INTO batch_registros (observacoes_ajuste, funcionario_ajuste) 

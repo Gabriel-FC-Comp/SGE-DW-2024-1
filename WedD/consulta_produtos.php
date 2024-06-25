@@ -72,7 +72,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
 
         <!-- Botão de logout -->
         <div class="col-auto">
-          <form action="end_session.php" method="POST">
+          <form action="./scripts/end_session.php" method="POST">
             <button id="logout_btn" class="btn">
               <img src="./imgs/logout.png" class="img-fluid" width="30px" alt="logout">
             </button>
