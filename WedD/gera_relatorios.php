@@ -59,6 +59,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
             <img src="./imgs/accessibilityPreta.png" class="img-fluid" width="30px" alt="accessibility">
           </button>
         </div>
+<<<<<<< Updated upstream
 
         <!-- Modal para escolha de tamanho da fonte -->
         <div id="modalFonte" class="modal">
@@ -71,6 +72,19 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
           </div>
         </div>
 
+=======
+        <!-- Modal para escolha de tamanho da fonte -->
+        <div id="modalFonte" class="modal">
+          <div class="modal-content">
+            <p>Escolha o tamanho da fonte:</p>
+            <!-- Controle deslizante para ajustar o tamanho da fonte -->
+            <input type="range" min="50" max="200" value="100" class="slider" id="fontSlider" onchange="alterarTamanhoFonte(this.value)">
+            <!-- Botão para fechar a modal -->
+            <button class="close" onclick="fecharModalFonte()">&times;</button>
+          </div>
+        </div>
+
+>>>>>>> Stashed changes
         <!-- Botão de logout -->
         <div class="col-auto">
           <form action="./scripts/end_session.php" method="POST">
@@ -193,6 +207,10 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
     <!-- Adicionando os Scripts -->
     <script src="./scripts/scripts.js"></script>
     <script src="./scripts/gera_rel.js"></script>
+<<<<<<< Updated upstream
+=======
+    <script src="./scripts/end_session.js"></script>
+>>>>>>> Stashed changes
     <!-- Adicionando o Bootstrap no Body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

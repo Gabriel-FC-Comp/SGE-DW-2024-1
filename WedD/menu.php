@@ -146,11 +146,20 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
     echo $info;
 
     echo "</div>";
+<<<<<<< Updated upstream
     ?>
 
     <!-- Adicionando os Scripts Próprios -->
     <script src='./scripts/menu_scripts.js'></script>
     <script src='./scripts/scripts.js'></script>
+=======
+    // <!-- Adicionando os Scripts -->
+    echo "<script src='./scripts/menu_scripts.js'></script>
+      <script src='./scripts/scripts.js'></script>
+      <script src='./scripts/end_session.js'></script>";
+    ?>
+
+>>>>>>> Stashed changes
     <!-- Adicionando o Bootstrap ao final do corpo da página -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
