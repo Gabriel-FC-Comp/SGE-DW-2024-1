@@ -59,6 +59,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
             <img src="./imgs/accessibilityPreta.png" class="img-fluid" width="30px" alt="accessibility">
           </button>
         </div>
+
         <!-- Modal para escolha de tamanho da fonte -->
         <div id="modalFonte" class="modal">
           <div class="modal-content">
@@ -192,7 +193,6 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
     <!-- Adicionando os Scripts -->
     <script src="./scripts/scripts.js"></script>
     <script src="./scripts/gera_rel.js"></script>
-    <script src="./scripts/end_session.js"></script>
     <!-- Adicionando o Bootstrap no Body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

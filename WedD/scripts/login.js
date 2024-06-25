@@ -37,10 +37,11 @@ function search_prod(event) {
                 // Redireciona para o menu
                 window.location.href = "./menu.php";
             } else {
+                alert(data.error);
                 console.log(data.error)
             }
         })
         .catch(error => console.error('Erro: ', error));
 }
 
-document.getElementById("login_form").addEventListener("submit",function(event){search_prod(event)},false);
+document.getElementById("login_form").addEventListener("submit", function (event) { search_prod(event) }, false);

@@ -49,7 +49,9 @@ if ($result) {
             'aj_estoq_comp_permiss' => $row["permissao_ajuste_estoque_compras"],
             'aj_estoq_said_permiss' => $row["permissao_ajuste_estoque_vendas"],
             'aj_estoq_aj_permiss' => $row["permissao_ajuste_estoque_ajuste"],
-            'permiss_change_permiss' => $row["permissao_mudar_permissoes"]
+            'permiss_change_permiss' => $row["permissao_mudar_permissoes"],
+            'consultar_prod' => $row["permissao_consultar_prod"],
+            'gen_tipo_prod' => $row["permissao_tipos_produtos"]
         );
 
         // Converte o array associativo em formato JSON
@@ -57,7 +59,6 @@ if ($result) {
 
         // Retorna os resultados para o lado do cliente em formato JSON
         echo $jsonResultados;
-
     } else {
         //http_response_code(404); // Not Found
         echo json_encode(array('error' => 'Funcionário não encontrado.'));

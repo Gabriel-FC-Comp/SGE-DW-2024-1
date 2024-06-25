@@ -3,9 +3,9 @@
 // Inicia a sessão
 session_start();
 // Verifica se o usuário está conectado
-if(!isset($_SESSION['user_connected']) || $_SESSION['user_connected'] === false) {
-  ?>
-  
+if (!isset($_SESSION['user_connected']) || $_SESSION['user_connected'] === false) {
+?>
+
   <!DOCTYPE html>
   <html lang="en">
 
@@ -13,8 +13,8 @@ if(!isset($_SESSION['user_connected']) || $_SESSION['user_connected'] === false)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - SGE</title>
-      <!-- Favicon na Aba do Navegador -->
-      <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <!-- Favicon na Aba do Navegador -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -57,7 +57,7 @@ if(!isset($_SESSION['user_connected']) || $_SESSION['user_connected'] === false)
         </div>
       </div>
     </div>
-  <!-- ---------------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------------------- -->
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -86,20 +86,17 @@ if(!isset($_SESSION['user_connected']) || $_SESSION['user_connected'] === false)
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./scripts/login.js"></script>
     <script src="./scripts/scripts.js"></script>
-    <script src="./scripts/end_session.js"></script>
     <!-- Adicionando o Bootstrap no Body -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 
   </html>
 
 <?php
 
-}else{
-    header("Location: menu.php");
-    exit;
+} else {
+  header("Location: menu.php");
+  exit;
 }
 
 ?>

@@ -19,7 +19,7 @@ function resetCheckboxes() {
   let checkboxes = document.querySelectorAll('.custom-checkbox input[type="checkbox"]');
 
   // Define o estado de cada checkbox como desmarcado
-  checkboxes.forEach(function(checkbox) {
+  checkboxes.forEach(function (checkbox) {
     checkbox.checked = false;
   });
 }
@@ -33,7 +33,9 @@ function search_func() {
 
   let func_name_inp = document.getElementById("func_name_inp");
   let checkCadastroFuncionario = document.getElementById("checkCadastroFuncionario");
+  let checkConsultarProd = document.getElementById("checkConsultarProd");
   let checkCadastroProdutos = document.getElementById("checkCadastroProdutos");
+  let checkTiposProdutos = document.getElementById("checkTiposProdutos");
   let checkGerarRelatorios = document.getElementById("checkGerarRelatorios");
   let checkPermissoesFunc = document.getElementById("checkPermissoesFunc");
   let checkAjuste = document.getElementById("checkAjuste");
@@ -79,7 +81,8 @@ function search_func() {
         checkCompras.checked = data.aj_estoq_comp_permiss;
         checkVendas.checked = data.aj_estoq_said_permiss;
         checkCorrecao.checked = data.aj_estoq_aj_permiss;
-
+        checkConsultarProd.checked = data.consultar_prod;
+        checkTiposProdutos.checked = data.gen_tipo_prod;
       } else {
         console.log(data.error)
         func_name_inp = "";
@@ -91,7 +94,8 @@ function search_func() {
         checkCompras.checked = false;
         checkVendas.checked = false;
         checkCorrecao.checked = false;
-
+        checkConsultarProd.checked = false;
+        checkTiposProdutos.checked = false;
       }
     })
     .catch(error => console.error('Erro:', error));

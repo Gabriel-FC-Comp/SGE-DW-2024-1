@@ -36,7 +36,7 @@ function mudar_cor(inverter_valor = true) {
   let scrollHeaders = $('.scroll_header');
   let card = $('.card');  // Adicionando o card
 
-  
+
   // Invertendo o valor da variável cor
   //cor = !cor;
   if (inverter_valor) {
@@ -85,7 +85,7 @@ function mudar_cor(inverter_valor = true) {
     buttonsMenu.removeClass('dark-mode');
     permit.removeClass('dark-mode');
     card.removeClass('dark-mode');
-    
+
     // Restaurando imagens originais
     acessibilidade.attr('src', './imgs/accessibilityPreta.png');
     home.attr('src', './imgs/homePreta.png');
