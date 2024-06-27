@@ -231,12 +231,12 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
         <div class="row align-items-left mt-5">
           <!-- Botão para salvar informações do funcionário -->
           <div class="col-auto">
-            <button type="submit" class="rounded-pill degradeButton end-0 m-3" type="submit">Salvar Funcionário</button>
+            <button type="submit" class="rounded-pill degradeButton end-0 m-3" name="salvar">Salvar Funcionário</button>
           </div>
 
           <!-- Botão para excluir funcionário -->
           <div class="col-auto">
-            <button id="delet_func_btn" type="button" class="rounded-pill degradeButton end-0 m-3">Excluir
+            <button id="delet_func_btn" name="deletar" type="submit" class="rounded-pill degradeButton end-0 m-3">Excluir
               Funcionário</button>
           </div>
         </div>

@@ -70,10 +70,6 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
           </form>
         </div>
 
-<<<<<<< Updated upstream
-=======
-        <script src="./scripts/end_session.js"></script>
->>>>>>> Stashed changes
         <!-- Switch para alternar o modo de cor -->
         <div class="col-auto">
           <div class="form-check form-switch">
@@ -86,7 +82,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
 
     <div class="container mt-5 pt-4">
       <!-- Formulário para entrada de dados sobre o produto -->
-      <form id="cad_prod_form" action="/cad_prod" method="post">
+      <form id="cad_prod_form" action="./scripts/cadastra_prod.php" method="post">
         <div class="row align-items-left">
           <!-- Campo para ID -->
           <div class="col-auto mb-3">
@@ -159,7 +155,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
         <div class="row align-items-left mt-5 pt-5">
           <!-- Botão para Salvar -->
           <div class="col-auto">
-            <button type="submit" class="rounded-pill degradeButton">Salvar Produto</button>
+            <button type="submit" name="salvar_prod" class="rounded-pill degradeButton">Salvar Produto</button>
           </div>
 
           <!-- Botão para Limpar -->
@@ -169,7 +165,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
 
           <!-- Botão para Excluir Produto -->
           <div class="col-auto">
-            <button id="delet_prod_button" type="button" class="rounded-pill degradeButton">Excluir Produto</button>
+            <button id="delet_prod_button" name="delete_prod" type="submit" class="rounded-pill degradeButton">Excluir Produto</button>
           </div>
 
         </div>
@@ -181,10 +177,6 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
     <script src="./scripts/scripts.js"></script>
     <script src="./scripts/mascaras.js"></script>
     <script src="./scripts/cadastro_prod.js"></script>
-<<<<<<< Updated upstream
-=======
-    <script src="./scripts/end_session.js"></script>
->>>>>>> Stashed changes
     <!-- Adicionando o Bootstrap no Body -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

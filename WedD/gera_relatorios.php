@@ -59,7 +59,6 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
             <img src="./imgs/accessibilityPreta.png" class="img-fluid" width="30px" alt="accessibility">
           </button>
         </div>
-<<<<<<< Updated upstream
 
         <!-- Modal para escolha de tamanho da fonte -->
         <div id="modalFonte" class="modal">
@@ -72,19 +71,6 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
           </div>
         </div>
 
-=======
-        <!-- Modal para escolha de tamanho da fonte -->
-        <div id="modalFonte" class="modal">
-          <div class="modal-content">
-            <p>Escolha o tamanho da fonte:</p>
-            <!-- Controle deslizante para ajustar o tamanho da fonte -->
-            <input type="range" min="50" max="200" value="100" class="slider" id="fontSlider" onchange="alterarTamanhoFonte(this.value)">
-            <!-- Botão para fechar a modal -->
-            <button class="close" onclick="fecharModalFonte()">&times;</button>
-          </div>
-        </div>
-
->>>>>>> Stashed changes
         <!-- Botão de logout -->
         <div class="col-auto">
           <form action="./scripts/end_session.php" method="POST">
