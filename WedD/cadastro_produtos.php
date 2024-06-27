@@ -70,24 +70,13 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
           </form>
         </div>
 
-<<<<<<< HEAD
-        <<<<<<< Updated upstream=======<script src="./scripts/end_session.js">
-          </script>
-          >>>>>>> Stashed changes
-          <!-- Switch para alternar o modo de cor -->
-          <div class="col-auto">
-            <div class="form-check form-switch">
-              <input id="colorModeSwitch" class="form-check-input" type="checkbox" role="switch">
-              <label class="form-check-label" for="colorModeSwitch"></label>
-            </div>
-=======
         <!-- Switch para alternar o modo de cor -->
         <div class="col-auto">
           <div class="form-check form-switch">
             <input id="colorModeSwitch" class="form-check-input" type="checkbox" role="switch">
             <label class="form-check-label" for="colorModeSwitch"></label>
->>>>>>> 601769f7875b0c0894778218c52982bb357d4618
           </div>
+        </div>
       </div>
     </div>
 

@@ -69,7 +69,6 @@ Autores:
           <button id="logout_btn" class="btn">
             <img src="./imgs/logout.png" class="img-fluid" width="30px" alt="logout">
           </button>
-<<<<<<< HEAD
         </form>
       </div>
 
@@ -78,36 +77,6 @@ Autores:
         <div class="form-check form-switch">
           <input id="colorModeSwitch" class="form-check-input" type="checkbox" role="switch">
           <label class="form-check-label" for="colorModeSwitch"></label>
-=======
-        </div>
-
-        <!-- Modal para escolha de tamanho da fonte -->
-        <div id="modalFonte" class="modal">
-          <div class="modal-content">
-            <p>Escolha o tamanho da fonte:</p>
-            <!-- Controle deslizante para ajustar o tamanho da fonte -->
-            <input type="range" min="50" max="200" value="100" class="slider" id="fontSlider" onchange="alterarTamanhoFonte(this.value)">
-            <!-- Botão para fechar a modal -->
-            <button class="close" onclick="fecharModalFonte()">&times;</button>
-          </div>
-        </div>
-
-        <!-- Botão de logout -->
-        <div class="col-auto">
-          <form action="./scripts/end_session.php" method="POST">
-            <button id="logout_btn" class="btn">
-              <img src="./imgs/logout.png" class="img-fluid" width="30px" alt="logout">
-            </button>
-          </form>
-        </div>
-
-        <!-- Switch para alternar o modo de cor -->
-        <div class="col-auto">
-          <div class="form-check form-switch">
-            <input id="colorModeSwitch" class="form-check-input" type="checkbox" role="switch">
-            <label class="form-check-label" for="colorModeSwitch"></label>
-          </div>
->>>>>>> 601769f7875b0c0894778218c52982bb357d4618
         </div>
       </div>
     </div>
