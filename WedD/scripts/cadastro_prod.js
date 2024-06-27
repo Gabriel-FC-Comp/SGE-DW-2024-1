@@ -18,43 +18,43 @@ let prod_barcode_inp = document.getElementById("prod_barcode_inp"); // Campo de 
 
 
 let cad_prod_form = document.getElementById("cad_prod_form"); // Botão para salvar o produto
-let del_prod_btn = document.getElementById("delet_prod_button"); // Botão para deletar um produto
+// let del_prod_btn = document.getElementById("delet_prod_button"); // Botão para deletar um produto
 
 // Função para salvar informações do produto
-function save_prod(event) {
-  event.preventDefault(); // Impedir o envio padrão do formulário
+// function save_prod(event) {
+// //   // event.preventDefault(); // Impedir o envio padrão do formulário
 
-  // Pega os dados do formulário
-  let prod_form_data = new FormData(this);
-  let prod_id = prod_form_data.get("prod_id");
-  let prod_name = prod_form_data.get("prod_name");
-  let prod_type = prod_form_data.get("prod_type");
-  let prod_model = prod_form_data.get("prod_model");
-  let prod_barcode = prod_form_data.get("prod_barcode");
+//   // Pega os dados do formulário
+//   let prod_form_data = new FormData(this);
+//   let prod_id = prod_form_data.get("prod_id");
+//   let prod_name = prod_form_data.get("prod_name");
+//   let prod_type = prod_form_data.get("prod_type");
+//   let prod_model = prod_form_data.get("prod_model");
+//   let prod_barcode = prod_form_data.get("prod_barcode");
 
-  // Registra no console a adição de um novo produto
-  console.log("Adicionando novo produto:");
-  console.log("ID: " + prod_id);
-  console.log("Nome: " + prod_name);
-  console.log("Tipo: " + "type_" + prod_type);
-  console.log("Modelo: " + prod_model);
-  console.log("Código de Barras: " + prod_barcode);
+//   // Registra no console a adição de um novo produto
+//   console.log("Adicionando novo produto:");
+//   console.log("ID: " + prod_id);
+//   console.log("Nome: " + prod_name);
+//   console.log("Tipo: " + "type_" + prod_type);
+//   console.log("Modelo: " + prod_model);
+//   console.log("Código de Barras: " + prod_barcode);
 
-}
+// }
 
-// Função para deletar um produto baseado no ID fornecido
-function del_prod() {
-  if (prod_id_inp.value != "") {
-    // Registra a exclusão do produto no console
-    console.log("Produto Excluído");
-    // Limpa somente o campo de ID do produto
-    prod_id_inp.value = "";
-  } else {
-    // Alerta o usuário para fornecer um ID antes de tentar remover um produto
-    alert("Insira um ID para poder removê-lo!");
-    console.log("Insira um ID para poder removê-lo!");
-  }
-}
+//Função para deletar um produto baseado no ID fornecido
+// function del_prod() {
+//   if (prod_id_inp.value != "") {
+//     // Registra a exclusão do produto no console
+//     console.log("Produto Excluído");
+//     // Limpa somente o campo de ID do produto
+//     prod_id_inp.value = "";
+//   } else {
+//     // Alerta o usuário para fornecer um ID antes de tentar remover um produto
+//     alert("Insira um ID para poder removê-lo!");
+//     console.log("Insira um ID para poder removê-lo!");
+//   }
+// }
 
 function search_prod() {
 
@@ -110,6 +110,6 @@ function search_prod() {
 }
 
 // Adicionando event listeners para os botões que disparam as funções correspondentes ao clicar
-cad_prod_form.addEventListener("submit", save_prod, false);
-del_prod_btn.addEventListener("click", del_prod, false);
+// cad_prod_form.addEventListener("submit", save_prod, false);
+// del_prod_btn.addEventListener("click", del_prod, false);
 prod_id_inp.addEventListener("blur", search_prod, false);

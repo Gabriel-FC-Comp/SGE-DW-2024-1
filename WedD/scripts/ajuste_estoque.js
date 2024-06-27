@@ -29,6 +29,69 @@ let finalize_alt_btn = document.getElementById("btn_finalizar");
 let contador = 0; // Inicializa um contador para IDs únicos
 let selectedOptionId = ""; // ID do tipo selecionado
 
+
+// function search_func() {
+
+
+//   // Remove a máscara
+//   let value_cpf_func = cpf_func_inp.value.replace(/[.,-]/g, '');
+
+//   // Cria um objeto de dados a serem enviados
+//   var data = {
+//     cpf_func: value_cpf_func
+//   };
+
+//   // Configura as opções da requisição
+//   var options = {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(data)
+//   };
+
+//   // Faz a requisição usando a API Fetch
+//   fetch('./scripts/search_func_data.php', options)
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error('Erro na requisição');
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       // Verifica se achou o produto
+//       if (data.error == undefined) {
+
+//         func_name_inp.value = data.func_name;
+//         checkCadastroFuncionario.checked = data.cad_func_permiss;
+//         checkCadastroProdutos.checked = data.cad_prod_permiss;
+//         checkGerarRelatorios.checked = data.gera_rel_permiss;
+//         checkPermissoesFunc.checked = data.permiss_change_permiss;
+//         checkAjuste.checked = data.aj_estoq_permiss;
+//         checkCompras.checked = data.aj_estoq_comp_permiss;
+//         checkVendas.checked = data.aj_estoq_said_permiss;
+//         checkCorrecao.checked = data.aj_estoq_aj_permiss;
+//         checkConsultarProd.checked = data.consultar_prod;
+//         checkTiposProdutos.checked = data.gen_tipo_prod;
+//       } else {
+//         console.log(data.error)
+//         func_name_inp = "";
+//         checkCadastroFuncionario.checked = false;
+//         checkCadastroProdutos.checked = false;
+//         checkGerarRelatorios.checked = false;
+//         checkPermissoesFunc.checked = false;
+//         checkAjuste.checked = false;
+//         checkCompras.checked = false;
+//         checkVendas.checked = false;
+//         checkCorrecao.checked = false;
+//         checkConsultarProd.checked = false;
+//         checkTiposProdutos.checked = false;
+//       }
+//     })
+//     .catch(error => console.error('Erro:', error));
+// }
+
+
 // Função para adicionar um registro à lista
 function Adicionar() {
   // Obtém os valores dos campos

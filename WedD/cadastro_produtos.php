@@ -70,6 +70,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
           </form>
         </div>
 
+<<<<<<< HEAD
         <<<<<<< Updated upstream=======<script src="./scripts/end_session.js">
           </script>
           >>>>>>> Stashed changes
@@ -79,13 +80,20 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
               <input id="colorModeSwitch" class="form-check-input" type="checkbox" role="switch">
               <label class="form-check-label" for="colorModeSwitch"></label>
             </div>
+=======
+        <!-- Switch para alternar o modo de cor -->
+        <div class="col-auto">
+          <div class="form-check form-switch">
+            <input id="colorModeSwitch" class="form-check-input" type="checkbox" role="switch">
+            <label class="form-check-label" for="colorModeSwitch"></label>
+>>>>>>> 601769f7875b0c0894778218c52982bb357d4618
           </div>
       </div>
     </div>
 
     <div class="container mt-5 pt-4">
       <!-- Formulário para entrada de dados sobre o produto -->
-      <form id="cad_prod_form" action="/cad_prod" method="post">
+      <form id="cad_prod_form" action="./scripts/cadastra_prod.php" method="post">
         <div class="row align-items-left">
           <!-- Campo para ID -->
           <div class="col-auto mb-3">
@@ -158,7 +166,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
         <div class="row align-items-left mt-5 pt-5">
           <!-- Botão para Salvar -->
           <div class="col-auto">
-            <button type="submit" class="rounded-pill degradeButton">Salvar Produto</button>
+            <button type="submit" name="salvar_prod" class="rounded-pill degradeButton">Salvar Produto</button>
           </div>
 
           <!-- Botão para Limpar -->
@@ -168,7 +176,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
 
           <!-- Botão para Excluir Produto -->
           <div class="col-auto">
-            <button id="delet_prod_button" type="button" class="rounded-pill degradeButton">Excluir Produto</button>
+            <button id="delet_prod_button" name="delete_prod" type="submit" class="rounded-pill degradeButton">Excluir Produto</button>
           </div>
 
         </div>
