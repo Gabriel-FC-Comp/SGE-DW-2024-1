@@ -254,7 +254,7 @@ body {
 
 /* Campo dos valores unitário e total do produto */
 .valueCamp {
-  max-width: 15%;
+  max-width: 20%;
   width: 100%;
   display: inline-flex;
 }

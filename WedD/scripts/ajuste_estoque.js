@@ -28,69 +28,7 @@ let finalize_alt_btn = document.getElementById("btn_finalizar");
 
 let contador = 0; // Inicializa um contador para IDs únicos
 let selectedOptionId = ""; // ID do tipo selecionado
-
-
-// function search_func() {
-
-
-//   // Remove a máscara
-//   let value_cpf_func = cpf_func_inp.value.replace(/[.,-]/g, '');
-
-//   // Cria um objeto de dados a serem enviados
-//   var data = {
-//     cpf_func: value_cpf_func
-//   };
-
-//   // Configura as opções da requisição
-//   var options = {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(data)
-//   };
-
-//   // Faz a requisição usando a API Fetch
-//   fetch('./scripts/search_func_data.php', options)
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error('Erro na requisição');
-//       }
-//       return response.json();
-//     })
-//     .then(data => {
-//       // Verifica se achou o produto
-//       if (data.error == undefined) {
-
-//         func_name_inp.value = data.func_name;
-//         checkCadastroFuncionario.checked = data.cad_func_permiss;
-//         checkCadastroProdutos.checked = data.cad_prod_permiss;
-//         checkGerarRelatorios.checked = data.gera_rel_permiss;
-//         checkPermissoesFunc.checked = data.permiss_change_permiss;
-//         checkAjuste.checked = data.aj_estoq_permiss;
-//         checkCompras.checked = data.aj_estoq_comp_permiss;
-//         checkVendas.checked = data.aj_estoq_said_permiss;
-//         checkCorrecao.checked = data.aj_estoq_aj_permiss;
-//         checkConsultarProd.checked = data.consultar_prod;
-//         checkTiposProdutos.checked = data.gen_tipo_prod;
-//       } else {
-//         console.log(data.error)
-//         func_name_inp = "";
-//         checkCadastroFuncionario.checked = false;
-//         checkCadastroProdutos.checked = false;
-//         checkGerarRelatorios.checked = false;
-//         checkPermissoesFunc.checked = false;
-//         checkAjuste.checked = false;
-//         checkCompras.checked = false;
-//         checkVendas.checked = false;
-//         checkCorrecao.checked = false;
-//         checkConsultarProd.checked = false;
-//         checkTiposProdutos.checked = false;
-//       }
-//     })
-//     .catch(error => console.error('Erro:', error));
-// }
-
+let total_ajuste = document.getElementById("ajuste_total_value");
 
 // Função para adicionar um registro à lista
 function Adicionar() {
@@ -112,7 +50,7 @@ function Adicionar() {
     let p_estoq = document.createElement("span");
     p_estoq.classList.add("corTexto", "bg-transparent");
     // Define o conteúdo do registro
-    p_estoq.innerHTML = `<span class="idCamp text-center">${id_estoq}</span> | <span class="nameCamp text-center">Produto</span> | <span class="qtdeCamp text-center">${qtd_estoq}</span> | <span class="valueCamp text-center">${preco_estoq}</span> | <span class="valueCamp text-center">${total_estoq}</span>`;
+    p_estoq.innerHTML = `<span class="idCamp text-center">${id_estoq}</span> | <span class="qtdeCamp text-center">${qtd_estoq}</span> | <span class="valueCamp text-center">${preco_estoq}</span> | <span class="valueCamp text-center">${desconto_estoq}</span>  | <span class="valueCamp text-center">${total_estoq}</span>`;
 
     // Verifica se está em modo escuro e aplica as classes correspondentes
     if (cor) {
@@ -129,6 +67,11 @@ function Adicionar() {
 
     // Adiciona o registro à lista
     scroll_div.appendChild(reg_estoq);
+    let total_estoq_dec = Number(new Decimal(total.value.replace(",", ".")));
+    let total_ajuste_dec = Number(new Decimal(total_ajuste.innerText.replace(",", ".")));
+    let novo_total = Number(total_estoq_dec + total_ajuste_dec);
+    total_ajuste.innerText = novo_total.toFixed(2).replace(".",",");
+    console.log(scroll_div);
   } else {
     // Mostra um alerta se os campos obrigatórios não estiverem preenchidos
     alert("Informe um ID e uma quantidade para adicionar um registro!");
@@ -178,6 +121,10 @@ function rmv_reg() {
     let tipo_a_remover = document.getElementById(selectedOptionId);
     // Verifica se o registro a ser removido existe
     if (tipo_a_remover != null) {
+      let total_estoq_dec = Number(new Decimal(total.value.replace(",", ".")));
+      let total_ajuste_dec = Number(new Decimal(total_ajuste.innerText.replace(",", ".")));
+      let novo_total = Number(total_ajuste_dec - total_estoq_dec);
+      total_ajuste.innerText = novo_total.toFixed(2).replace(".",",");
       // Remove o registro da lista
       scroll_div.removeChild(tipo_a_remover);
       console.log("Remove o tipo: " + tipo_a_remover.id);
@@ -201,6 +148,88 @@ function finalize_ajuste() {
     console.log("Observações: " + obs.value);
     console.log("Registro de alterações");
     console.log("");
+    //Remove Virgulas
+    // let value_cpf_func = cpf_func_inp.value.replace(/[.,-]/g, '');
+
+    let data_batch = {
+      obs: obs.value
+    };
+
+    var options_batch = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data_batch)
+    };
+
+    let id_batch = -1;
+
+    fetch('./scripts/create_batch.php', options_batch)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erro na requisição');
+        }
+        return response.json();
+      })
+
+      .then(data => {
+        // Verifica se criou o batch
+        console.log("Data: "+data);
+        if (data.error == undefined) {
+          id_batch = data.batch_id;
+          console.log("Aqui. ID: "+data.batch_id);
+          console.log("Id do batch: "+id_batch);
+          //Para cada registro
+          for(const child of scroll_div.children){
+            console.log("Codigo Produto: "+child.children[0].children[0].innerText)
+
+            // Cria um objeto de dados a serem enviados
+            let data = {
+              prod_id: child.children[0].children[0].innerText,
+              qtde_prod: child.children[0].children[1].innerText,
+              preco_prod: child.children[0].children[2].innerText,
+              desconto_prod: child.children[0].children[3].innerText,
+              total_prod: child.children[0].children[4].innerText,
+              batch_id: id_batch,
+              ajuste_type: aj_type.value
+            };
+
+            // Configura as opções da requisição
+            var options = {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(data)
+            };
+            // Faz a requisição usando a API Fetch
+            fetch('./scripts/search_estoque.php', options)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Erro na requisição');
+              }
+              return response.json();
+            })
+
+            .then(data => {
+              // Verifica se achou o produto
+              if (data.error == undefined) {
+                console.log(data.sucesso);
+              } else {
+                console.log(data.error)
+              }
+            })
+            .catch(error => console.error('Erro:', error));
+                
+          }
+        } else {
+          console.log(data.error)
+        }
+      })
+      .catch(error => console.error('Erro:', error));
+
+    location.reload();
   } else {
     // Mostra um alerta se algum campo obrigatório estiver vazio
     alert("Insira um registro para ajuste e todas as informações necessárias (*) !");

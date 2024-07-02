@@ -89,7 +89,7 @@ function search_prod() {
         prod_model_inp.value = data.prod_model;
         prod_barcode_inp.value = data.prod_barcode;
         // prod_qtde = data.prod_qtde;
-
+        console.log(data);
         Array.from(prod_type_inp.options).forEach((option, i) => {
           if (option.value === data.prod_type) {
             prod_type_inp.selectedIndex = i;
