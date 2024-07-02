@@ -84,82 +84,83 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
           <!-- Input para Data de Ajuste -->
           <div class="col-auto mb-2">
             <p class="corTexto">Data Ajuste*</p>
-            <input id="dataAjuste" type="date" class="form-control" required>
+            <input id="dataAjuste" name="ajuste_date" type="date" class="form-control" required>
           </div>
 
           <!-- Seleção de Tipo de Ajuste -->
           <div class="col-auto mb-2">
             <p class="corTexto">Tipo de Ajuste*</p>
-            <select id="aj_type_inp" class="form-select" id="floatingSelect" required>
+            <select id="aj_type_inp" name="ajuste_type" class="form-select" id="floatingSelect" required>
               <option selected>Selecione um tipo</option>
-              <option value="1">Entrada</option>
-              <option value="2">Saída</option>
-              <option value="3">Ajuste</option>
+              <option value="Entrada">Entrada</option>
+              <option value="Saída">Saída</option>
+              <option value="Ajuste">Ajuste</option>
             </select>
           </div>
 
           <!-- Observações -->
           <div class="col mb-2">
             <p class="corTexto">Observações</p>
-            <textarea id="observacoes" class="form-control" rows="4" cols="50"></textarea>
+            <textarea id="observacoes" name="obs_text" class="form-control" rows="4" cols="50"></textarea>
           </div>
 
         </div>
-      </form>
+      <!-- </form>
 
-      <form>
+      <form> -->
         <div class="row align-items-left mt-3">
           <!-- Formulário com para adicionar um registro no ajuste -->
 
           <!-- ID do Produto -->
           <div class="col-auto mb-2">
             <p class="corTexto">ID*</p>
-            <input id="id_estoq" type="number" class="form-control" required>
+            <input id="id_estoq" name="prod_id" type="number" class="form-control" required>
           </div>
 
           <!-- Quantidade -->
           <div class="col-auto mb-2">
             <p class="corTexto">Quantidade*</p>
-            <input id="qtd_estoq" type="number" class="form-control" step="1" min=0 value="0" required>
+            <input id="qtd_estoq" name="qtde_ajuste" type="number" class="form-control" step="1" min=0 value="0" required>
           </div>
 
           <!-- Preço -->
           <div class="col-auto mb-2">
             <p class="corTexto">Preço*</p>
-            <input id="preco_estoq" type="text" class="form-control" value="0,00" required>
+            <input id="preco_estoq" name="preco_ajuste" type="text" class="form-control" value="0,00" required>
           </div>
 
           <!-- Desconto -->
           <div class="col-auto mb-2">
-            <p class="corTexto">Desconto</p>
-            <input id="desconto_estoq" type="text" value="0,00" class="form-control">
+            <p class="corTexto">Desconto Total</p>
+            <input id="desconto_estoq" name="desconto_ajuste" type="text" value="0,00" class="form-control">
           </div>
 
           <!-- Total -->
           <div class="col-auto mb-2">
             <p class="corTexto">Total</p>
-            <input id="total_estoq" type="text" class="form-control" disabled>
+            <input id="total_estoq" name="total_ajuste" type="text" class="form-control" disabled>
           </div>
 
           <!-- Botão para Adicionar -->
           <div class="col-auto pt-4 mt-2 mb-2">
-            <button id="btn_adicionar" type="button" class="rounded-pill degradeButton">Adicionar</button>
+            <button id="btn_adicionar" name="add_ajuste" type="button" class="rounded-pill degradeButton">Adicionar</button>
           </div>
 
 
         </div>
-      </form>
+      <!-- </form> -->
 
       <!-- Lista de Itens -->
       <div class="row div_list mt-3 py-4 px-3 rounded-5">
         <div class="row rounded-5 my-2 mx-0 pe-0 h-25">
           <!-- Cabeçalho da Lista de Itens -->
-          <div class="col ps-2 rounded-5 scroll_header">
+          <div class="col ps-3 rounded-5 scroll_header">
             <span class="corTexto">
               <span class="text-center idCamp">ID</span>|
-              <span class="text-center nameCamp">Nome do Produto</span>|
+              <!-- <span class="text-center nameCamp">Nome do Produto</span>| -->
               <span class="text-center qtdeCamp">Qtde</span>|
               <span class="text-center valueCamp">Valor Un (R$)</span>|
+              <span class="text-center valueCamp">Desconto Total (R$)</span>|
               <span class="text-center valueCamp">Total (R$)</span>
             </span>
           </div>
@@ -179,7 +180,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
       <div class="row mt-4">
         <!-- Botão para Finalizar Ajuste -->
         <div class="col-auto p-0">
-          <button id="btn_finalizar" type="button" class="rounded-pill degradeButton">Finalizar Ajuste</button>
+          <button id="btn_finalizar" name="fin_ajuste" type="button" class="rounded-pill degradeButton">Finalizar Ajuste</button>
         </div>
 
         <!-- Exibição do Ajuste Total -->
@@ -187,7 +188,7 @@ if (isset($_SESSION['user_connected']) && $_SESSION['user_connected'] === true) 
           <p class="corTexto">Ajuste Total: R$<span id="ajuste_total_value">0,00</span></p>
         </div>
       </div>
-
+      </form>
     </div>
 
     <!-- Adicionando os Scripts -->
